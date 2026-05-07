@@ -65,3 +65,6 @@ htmlcov/
 *.tar.xz
 *.tar.zst
 ```
+
+# specs
+specs/
