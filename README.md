@@ -53,7 +53,6 @@ The Social-science Simulation Engine is an AI-native tool for modelling emergent
 
 ### Microsimulation
 
-- [EUROMOD — Tax-Benefit Microsimulation Model for the EU](https://euromod-web.jrc.ec.europa.eu/overview/what-is-euromod) `tool` — The reference implementation of policy microsimulation at scale; models tax and benefit rules across EU member states to estimate distributional effects of policy changes on household incomes.
 - [Katikireddi et al. — Microsimulation as a flexible tool to evaluate policies and their impact on socioeconomic inequalities in health (2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10590730/) `paper` — Demonstrates how a microsimulation engine surfaces unequal health effects of policy interventions across income and demographic groups — a direct example of the distributional analysis this engine aims to support.
 - [Lovelace et al. — A Large-Scale Geographically Explicit Synthetic Population with Social Networks for the United States (2024)](https://www.nature.com/articles/s41597-024-03970-1) `paper` — Builds a country-scale synthetic population with embedded social networks for agent-based and microsimulation use; shows the current state of the art in population engine construction.
 
@@ -77,7 +76,11 @@ The Social-science Simulation Engine is an AI-native tool for modelling emergent
 
 ### Existing Systems
 
-*Coming soon.*
+- [Vezhnevets et al. — Concordia: Generative Agent-Based Modelling with Actions Grounded in Physical, Social, or Digital Space (2023)](https://arxiv.org/abs/2312.03664) `tool` — Google DeepMind's open-source library for building LLM-driven multi-agent simulations grounded in physical or digital environments; the reference engine from a leading AI lab for social science modelling with generative agents.
+- [Altera.AL — Project Sid: Many-Agent Simulations Toward AI Civilization (2024)](https://arxiv.org/abs/2411.00114) `paper` — Demonstrates 10–1,000+ AI agents developing specialised professions, governance structures, cultural norms, and economic systems in a shared environment; the most ambitious published test of emergent civilisational dynamics in an AI simulation engine.
+- [Yang et al. — OASIS: Open Agent Social Interaction Simulations with One Million Agents (2024)](https://arxiv.org/abs/2411.11581) `tool` — Scalable social media simulator supporting up to one million LLM-driven agents with dynamic social networks, recommendation systems, and diverse action spaces; designed to study large-scale group behaviour and information propagation.
+- [Argyle et al. — Out of One, Many: Using Language Models to Simulate Human Samples (2023)](https://doi.org/10.1017/pan.2023.2) `paper` — Stanford-affiliated work demonstrating that LLMs conditioned on demographic profiles can reproduce the distribution of human survey responses; foundational evidence for using AI agents as synthetic populations in social simulation.
+- [Stanford Digital Economy Lab — Economic Simulations with AI](https://digitaleconomy.stanford.edu/project/economic-simulations-with-ai/) `tool` — Stanford research programme combining LLMs, agent-based methods, and causal reasoning to build transparent, auditable economic simulation environments; an active lab-scale effort to build AI-native policy simulation engines.
 
 ### Agent-Based Modelling
 
