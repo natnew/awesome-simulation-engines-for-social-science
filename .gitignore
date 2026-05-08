@@ -68,3 +68,12 @@ htmlcov/
 
 # specs
 specs/
+
+# github
+.github/
+
+# kiro local tooling (skills, steering, settings)
+.kiro/
+
+# private working files
+CHANGELOG.md
