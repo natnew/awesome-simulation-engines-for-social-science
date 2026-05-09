@@ -1,6 +1,6 @@
 # Awesome Simulation Engines for Social Science
 
-A curated research and engineering map for AI-driven social simulation, synthetic populations, agent-based modelling, policy experiments, uncertainty modelling, and ethical risk discovery.
+> **The end goal is a learned simulation engine for the social sciences: a synthetic society layer capable of modelling complex human systems, perturbing them under different interventions, and generating useful probability landscapes about possible futures.**
 
 Social systems are adaptive, uncertain, partially observable, and non-linear. This repository maps the methods, systems, datasets, frameworks, and evaluation practices needed to explore possible futures under different interventions.
 
