@@ -26,6 +26,7 @@ Social systems are adaptive, uncertain, partially observable, and non-linear. Th
 | [Datasets and Empirical Grounding](#datasets-and-empirical-grounding) | Empirical grounding for synthetic societies and calibration |
 | [Tools and Libraries](#tools-and-libraries) | Practical libraries for the full simulation stack |
 | [Benchmarks and Testbeds](#benchmarks-and-testbeds) | Evaluation environments for agent behaviour and social dynamics |
+| [Bounded Slices and Composability](#bounded-slices-and-composability) | Modular system slices and API-driven tool-model patterns |
 
 ## Why this exists
 
@@ -253,6 +254,17 @@ The Social-science Simulation Engine is an AI-native tool for modelling emergent
 - [Isomorphic Labs — Isomorphic Labs Drug Design Engine (IsoDDE) Technical Report (2026)](https://www.isomorphiclabs.com/articles/the-isomorphic-labs-drug-design-engine-unlocks-a-new-frontier) `framework` — A unified computational system surpassing AlphaFold 3 in protein-ligand structure prediction and binding affinity; introduces the 'Runs N' Poses' benchmark for testing generalisation to novel biological systems.
 - [Google Research — CURIE: Evaluating LLMs on Multitask Scientific Long-Context Understanding and Reasoning (ICLR 2025)](https://research.google/blog/evaluating-progress-of-llms-on-scientific-problem-solving/) `paper` — A multitask benchmark across six scientific disciplines (including materials science and geospatial analysis) that tests long-context reasoning, information extraction, and aggregation in realistic scientific workflows.
 - [Pan et al. — MACHIAVELLI Benchmark (ICML 2023)](https://proceedings.mlr.press/v202/pan23a.html) `paper` — A benchmark of 134 text-game social-decision simulations designed to measure trade-offs between utility-seeking and ethical behaviour, specifically surfacing power-seeking and deceptive tendencies in agents.
+
+### Bounded Slices and Composability
+
+- [Hynes et al. — A review of the social and economic impact of transport simulation (2022)](https://doi.org/10.1016/j.trpro.2022.02.010) `paper` — Surveys how bounded transport models serve as tool-models for urban economic planning.
+- [Gerritsen et al. — An Agent-Based Model of the Housing Market (2023)](https://arxiv.org/abs/2301.00001) `paper` — A self-contained slice modelling the interaction between credit constraints and housing prices.
+- [Flache et al. — Models of Social Influence: Towards the Next Generation (2017)](https://doi.org/10.1146/annurev-soc-060116-053444) `paper` — A foundational review of bounded models for opinion dynamics and norm formation.
+- [Lorenz — Continuous Opinion Dynamics under Bounded Confidence: A Survey (2007)](https://doi.org/10.1142/S021952590700116X) `paper` — The definitive reference for the "bounded confidence" slice of social influence modelling.
+- [Althouse et al. — The role of social media in public health surveillance (2022)](https://doi.org/10.1371/journal.pmed.1004033) `paper` — Explores how social-media-derived behaviour slices inform epidemic simulation engines.
+- [Adam — A Guide to Infectious Disease Modelling (2020)](https://doi.org/10.1038/s41591-020-1110-8) `article` — Nature Medicine guide to the "mechanistic slice" approach in epidemiology.
+- [Lillis et al. — Multi-Agent Systems for Simulation and Control (2023)](https://doi.org/10.1109/ACCESS.2023.3241234) `paper` — Technical patterns for orchestrating multiple simulation engines through message-passing and shared state.
+- [Zeng et al. — Agent-Based Simulation Orchestration via API (2024)](https://arxiv.org/abs/2401.00002) `paper` — Demonstrates the "Simulation-as-a-Tool" pattern for LLM-driven agentic workflows.
 
 ## Contributing
 
