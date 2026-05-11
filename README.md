@@ -28,6 +28,7 @@ Social systems are adaptive, uncertain, partially observable, and non-linear. Th
 | [Benchmarks and Testbeds](#benchmarks-and-testbeds) | Evaluation environments for agent behaviour and social dynamics |
 | [Bounded Slices and Composability](#bounded-slices-and-composability) | Modular system slices and API-driven tool-model patterns |
 | [Frontier Science Parallels](#frontier-science-parallels) | Methodological transfers from biological, physical, and chemical simulation |
+| [Implementation Patterns](#implementation-patterns) | Engineering blueprints for differentiable ABMs, surrogates, and SBI pipelines |
 
 ## Why this exists
 
@@ -269,8 +270,6 @@ The Social-science Simulation Engine is an AI-native tool for modelling emergent
 
 ### Frontier Science Parallels
 
-Social simulation draws methodological inspiration from frontier AI for science, where learned simulators of complex biological, physical, and chemical systems have established new standards for latent dynamics and amortised inference.
-
 - [Jumper et al. — Highly accurate protein structure prediction with AlphaFold (2021)](https://www.nature.com/articles/s41586-021-03819-2) `paper` — The landmark reference for geometric deep learning and structural priors in complex system simulation; establishes the precedent for "learned simulation" of large-scale interactions.
 - [Isomorphic Labs — The Isomorphic Labs Drug Design Engine (2026)](https://www.isomorphiclabs.com/articles/the-isomorphic-labs-drug-design-engine-unlocks-a-new-frontier) `article` — Introduces the unified computational system for protein-ligand structure prediction; a methodological cousin to the social-system "tool model" ecosystem.
 - [Pathak et al. — FourCastNet: A Global Data-driven High-resolution Weather Model using Adaptive Fourier Neural Operators (2022)](https://arxiv.org/abs/2202.11214) `paper` — Demonstrates 1,000x speedups in weather simulation via learned latent dynamics; a direct parallel for social world models grounded in massive trace data.
@@ -280,6 +279,15 @@ Social simulation draws methodological inspiration from frontier AI for science,
 - [Li et al. — Differentiable Physics Simulation for Learning and Control (2022)](https://arxiv.org/abs/2202.00001) `paper` — A foundational reference for differentiable simulators that allow gradient-based policy optimization; the technical bridge to differentiable social engines.
 
 > **Transferability & Constraints**: While scientific simulation provides patterns for latent dynamics and scalability, social systems differ in their **observability limits** (hidden human intent), **ethical risks** (distributional harm), and **validation boundaries** (the lack of invariant laws like gravity or thermodynamics).
+
+### Implementation Patterns
+
+- [Chopra et al. — AgentTorch: A Framework for Differentiable Multi-Agent Simulation (2025)](https://arxiv.org/abs/2409.10568) `tool` — The canonical implementation of differentiable ABMs in PyTorch; enables automatic differentiation through agent interactions for rapid calibration.
+- [Quera-Bofarull et al. — Differentiable Agent-based Simulation for Policy Optimization (2023)](https://arxiv.org/abs/2305.10123) `paper` — Demonstrates how to use gradient-based methods to find optimal interventions in complex social ABMs.
+- [Dyer et al. — Interventionally Consistent Surrogates for Complex Simulation Models (2024)](https://arxiv.org/abs/2312.11158) `paper` — Oxford INET framework for learning neural surrogates that remain consistent under counterfactual perturbations.
+- [Hafner et al. — Mastering Diverse Domains through World Models (DreamerV3, 2025)](https://arxiv.org/abs/2301.04104) `paper` — The reference architecture for latent dynamics world models (RSSM) that can serve as the learned substrate for social simulation.
+- [Tejero-Cantero et al. — sbi: A toolkit for simulation-based inference (2020)](https://joss.theoj.org/papers/10.21105/joss.02505) `tool` — The industry-standard Python library for amortised neural posteriors (NPE/NLE/NRE) on simulation outputs.
+- [Cranmer et al. — The Frontier of Simulation-Based Inference (2020)](https://www.pnas.org/doi/10.1073/pnas.1912789117) `paper` — The foundational methodological framework for neural SBI, providing the blueprint for uncertainty-aware learned simulators.
 
 ## Contributing
 
