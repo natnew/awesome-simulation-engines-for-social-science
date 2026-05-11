@@ -1,5 +1,7 @@
 # Awesome Learned Social Simulation Engines
 
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![GitHub stars](https://img.shields.io/github/stars/natnew/awesome-simulation-engines-for-social-science?style=social)](https://github.com/natnew/awesome-simulation-engines-for-social-science/stargazers) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub contributors](https://img.shields.io/github/contributors/natnew/awesome-simulation-engines-for-social-science)](https://github.com/natnew/awesome-simulation-engines-for-social-science/graphs/contributors)
+
 > **This repository is a research map for learned social simulation engines: methods, tools, datasets, and evaluation practices for modelling bounded social systems under intervention.**
 
 Learned social simulation engines are composable, perturbable models of complex human systems. Unlike traditional simulations, they learn dynamics from data, represent uncertainty through probability landscapes, and allow for rigorous intervention testing in silico.
