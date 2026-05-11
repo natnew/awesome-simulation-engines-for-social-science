@@ -1,4 +1,5 @@
 ```
+
 # Documentation and examples
 docs/
 examples/
@@ -15,7 +16,6 @@ rubrics/
 .env
 .env.local
 *.env.*
-
 # Editor/IDE files
 .vscode/
 .idea/

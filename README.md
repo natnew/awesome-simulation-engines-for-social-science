@@ -75,10 +75,7 @@ flowchart TD
 | [Frontier Science Parallels](#frontier-science-parallels) | Methodological transfers from biological, physical, and chemical simulation |
 | [Implementation Patterns](#implementation-patterns) | Engineering blueprints for differentiable ABMs, surrogates, and SBI pipelines |
 | [Evaluation and Validation](#evaluation-and-validation) | Trust discipline, history matching, and behavioural fidelity benchmarks |
-
-## Why this exists
-
-The **Learned Social Simulation Engine ecosystem** is an AI-native framework for modelling emergent human systems under uncertainty. This repository maps the research, methods, and engineering practices needed to build modular simulation engines that can represent complex social dynamics—and to help others build them too.
+| [Architecture & Specs](./specs/) | Deep-dive blueprints, roadmaps, and requirements for engine phases |
 
 ## Resources
 
