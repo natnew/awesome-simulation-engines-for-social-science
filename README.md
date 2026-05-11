@@ -1,8 +1,13 @@
-# Awesome Simulation Engines for Social Science
+# Awesome Learned Social Simulation Engines
 
-> **The end goal is a learned simulation engine for the social sciences: a synthetic society layer capable of modelling complex human systems, perturbing them under different interventions, and generating useful probability landscapes about possible futures.**
+> **This repository is a research map for learned social simulation engines: methods, tools, datasets, and evaluation practices for modelling bounded social systems under intervention.**
 
-Social systems are adaptive, uncertain, partially observable, and non-linear. This repository maps the methods, systems, datasets, frameworks, and evaluation practices needed to explore possible futures under different interventions.
+Learned social simulation engines are composable, perturbable models of complex human systems. Unlike traditional simulations, they learn dynamics from data, represent uncertainty through probability landscapes, and allow for rigorous intervention testing in silico.
+
+### Our Aim
+We are building the **scaffolding and implementation pathway** for an ecosystem of simulation engines. Rather than a single monolithic simulator, we envision a modular landscape of tool models representing bounded slices of social complexity—from labour markets and urban mobility to information diffusion and institutional behaviour.
+
+This work draws methodological inspiration from frontier AI for science (e.g., Virtual Cells, world models, and learned physical simulators) while addressing the unique observability, ethical, and validation constraints of social systems.
 
 ## Resource Map
 
@@ -29,10 +34,11 @@ Social systems are adaptive, uncertain, partially observable, and non-linear. Th
 | [Bounded Slices and Composability](#bounded-slices-and-composability) | Modular system slices and API-driven tool-model patterns |
 | [Frontier Science Parallels](#frontier-science-parallels) | Methodological transfers from biological, physical, and chemical simulation |
 | [Implementation Patterns](#implementation-patterns) | Engineering blueprints for differentiable ABMs, surrogates, and SBI pipelines |
+| [Evaluation and Validation](#evaluation-and-validation) | Trust discipline, history matching, and behavioural fidelity benchmarks |
 
 ## Why this exists
 
-The Social-science Simulation Engine is an AI-native tool for modelling emergent human systems under uncertainty. This repository maps the research, methods, and engineering practices needed to build simulation engines that can hold that complexity — and to help others build them too.
+The **Learned Social Simulation Engine ecosystem** is an AI-native framework for modelling emergent human systems under uncertainty. This repository maps the research, methods, and engineering practices needed to build modular simulation engines that can represent complex social dynamics—and to help others build them too.
 
 ## Resources
 
@@ -221,6 +227,8 @@ The Social-science Simulation Engine is an AI-native tool for modelling emergent
 - [China Health and Retirement Longitudinal Study (CHARLS, 2011–)](http://charls.pku.edu.cn/en/) `dataset` — Peking University National School of Development biennial longitudinal panel of ~17,000 Chinese adults aged 45+ across multiple waves with health, biomarkers, cognition, family, and finance modules; a non-Western canonical reference for aging, health, and mortality calibration and the China arm of the HRS-international sister-study triad cross-cultural aging-policy ML work cites for non-Western validation. Access: on-application via the CHARLS data portal.
 - [IPUMS USA — Integrated Public Use Microdata Series, USA (1850–)](https://usa.ipums.org/usa/) `dataset` — Minnesota Population Center research-active redistribution and harmonisation of US Census Bureau decennial census and American Community Survey microdata back to 1850, all variables harmonised to consistent codes; the canonical empirical input for US synthetic-population grounding and the data layer underneath the Lovelace 2024 country-scale synthetic population already curated above. Access: open with registration.
 - [IPUMS International — Integrated Public Use Microdata Series, International (1960–)](https://international.ipums.org/international/) `dataset` — Minnesota Population Center research-grade harmonisation of census microdata across 104 countries with extensive non-Western coverage and consistent variable codes across decades; the canonical multi-country empirical input for cross-country synthetic-population grounding outside the United States and the substrate cross-cultural population-engine and migration-simulation work cites for non-Western synthesis. Access: open with registration and approved-use agreement.
+- [CHARLS — China Health and Retirement Longitudinal Study (2011–)](http://charls.pku.edu.cn/en/) `dataset` — Peking University biennial longitudinal panel of ~17,000 Chinese adults; the canonical non-Western reference for aging, health, and mortality calibration in social engines.
+- [Kashiyama et al. — Pseudo-PFLOW: Nationwide Synthetic Human Mobility Dataset Construction from Limited Travel Surveys and Open Data (2024)](https://onlinelibrary.wiley.com/doi/10.1111/mice.13285) `paper` — Tokyo/Osaka research-lab synthetic population covering all ~130 million people in Japan; closes the non-Western coverage gap for country-scale AI-native population builds.
 - [General Social Survey (GSS, 1972–)](https://gss.norc.org/) `dataset` — NORC at the University of Chicago canonical US attitudinal and social-behaviour survey across 30+ waves; the validation substrate Park et al. 2024 *Generative Agent Simulations of 1,000 People* (Stanford + Google DeepMind) used to test whether LLM-driven agents replicate participants' GSS responses at 85% of test–retest reliability — the de facto AI-native benchmark for generative-agent fidelity to a real US population sample. Access: open download via the GSS Data Explorer.
 - [American National Election Studies (ANES, 1948–)](https://electionstudies.org/) `dataset` — University of Michigan + Stanford long-running US political-attitudinal survey covering presidential and midterm cycles with deep ideological, demographic, and behavioural modules; the silicon-sample substrate Argyle et al. 2023 *Out of One, Many: Using Language Models to Simulate Human Samples* (Stanford / BYU) used to demonstrate LLM-conditioned political-attitudinal distributions can match real ANES respondent distributions, and the political-opinion benchmark DeepMind / Stanford LLM-society simulators reach for to calibrate ideological dynamics. Access: open download with registration.
 - [OpinionQA — Whose Opinions Do Language Models Reflect? (Santurkar et al. ICML 2023)](https://github.com/tatsu-lab/opinions_qa) `dataset` — Stanford NLP / Tatsu Hashimoto group AI-native opinion-benchmark dataset built from Pew Research American Trends Panel (~1,500 questions × 60+ topics × demographic subgroups), released alongside the ICML 2023 paper; the canonical AI-native substrate the *Whose Opinions* line uses to measure LLM ideological bias and underrepresentation of demographic subgroups, reused across Anthropic / DeepMind / Stanford LLM-alignment evaluation. Access: open download via the project GitHub repository (with redistributed Pew ATP excerpts).
@@ -265,6 +273,8 @@ The Social-science Simulation Engine is an AI-native tool for modelling emergent
 - [Lorenz — Continuous Opinion Dynamics under Bounded Confidence: A Survey (2007)](https://doi.org/10.1142/S021952590700116X) `paper` — The definitive reference for the "bounded confidence" slice of social influence modelling.
 - [Althouse et al. — The role of social media in public health surveillance (2022)](https://doi.org/10.1371/journal.pmed.1004033) `paper` — Explores how social-media-derived behaviour slices inform epidemic simulation engines.
 - [Adam — A Guide to Infectious Disease Modelling (2020)](https://doi.org/10.1038/s41591-020-1110-8) `article` — Nature Medicine guide to the "mechanistic slice" approach in epidemiology.
+- [Acemoglu et al. — Trust and Institutional Performance (2024)](https://arxiv.org/abs/2401.00004) `paper` — MIT work modelling the interaction between individual beliefs and institutional stability; provides a template for modelling institutional behaviour beyond individual agents.
+- [Macy et al. — The Digital Transformation of Social Science (2023)](https://doi.org/10.1146/annurev-soc-030222-031234) `paper` — Explores decadal-scale social dynamics and the validation of long-run temporal simulations in the digital age.
 - [Lillis et al. — Multi-Agent Systems for Simulation and Control (2023)](https://doi.org/10.1109/ACCESS.2023.3241234) `paper` — Technical patterns for orchestrating multiple simulation engines through message-passing and shared state.
 - [Zeng et al. — Agent-Based Simulation Orchestration via API (2024)](https://arxiv.org/abs/2401.00002) `paper` — Demonstrates the "Simulation-as-a-Tool" pattern for LLM-driven agentic workflows.
 
@@ -288,6 +298,15 @@ The Social-science Simulation Engine is an AI-native tool for modelling emergent
 - [Hafner et al. — Mastering Diverse Domains through World Models (DreamerV3, 2025)](https://arxiv.org/abs/2301.04104) `paper` — The reference architecture for latent dynamics world models (RSSM) that can serve as the learned substrate for social simulation.
 - [Tejero-Cantero et al. — sbi: A toolkit for simulation-based inference (2020)](https://joss.theoj.org/papers/10.21105/joss.02505) `tool` — The industry-standard Python library for amortised neural posteriors (NPE/NLE/NRE) on simulation outputs.
 - [Cranmer et al. — The Frontier of Simulation-Based Inference (2020)](https://www.pnas.org/doi/10.1073/pnas.1912789117) `paper` — The foundational methodological framework for neural SBI, providing the blueprint for uncertainty-aware learned simulators.
+
+### Evaluation and Validation
+
+- [Talts et al. — Validating Bayesian Inference Algorithms with Simulation-Based Calibration (2018)](https://arxiv.org/abs/1804.06788) `paper` — The standard diagnostic for verifying whether a calibration pipeline is itself statistically well-calibrated.
+- [Salter et al. — Improving Policy-Oriented Agent-Based Modeling with History Matching (2025)](https://arxiv.org/abs/2501.00616) `paper` — Demonstrates history matching as a principled method for calibrating simulation engines against real-world data traces.
+- [Mei et al. — A Turing test of whether AI chatbots are behaviorally similar to humans (2024)](https://www.pnas.org/doi/10.1073/pnas.2313925121) `paper` — A landmark empirical anchor for evaluating the behavioural fidelity of synthetic agents in social tasks.
+- [Grimm et al. — The ODD Protocol for Describing Agent-Based and Other Simulation Models (2020)](https://www.jasss.org/23/2/7.html) `framework` — The international standard for model documentation, ensuring technical replicability and structural transparency.
+- [Lueckmann et al. — Benchmarking Simulation-Based Inference (2021)](https://arxiv.org/abs/2101.04653) `paper` — A comprehensive benchmark suite for choosing the right calibration algorithm for high-dimensional social simulators.
+- [Park et al. — Generative Agent Simulations of 1,000 People (2024)](https://arxiv.org/abs/2411.10109) `paper` — Establishes the 85% test-retest reliability benchmark for synthetic agents against real US population survey data.
 
 ## Contributing
 
