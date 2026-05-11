@@ -80,3 +80,5 @@ CHANGELOG.md
 
 # Hooks
 scripts/hooks/
+# Local AI agent state
+.claude/
