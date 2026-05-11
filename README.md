@@ -245,7 +245,14 @@ The Social-science Simulation Engine is an AI-native tool for modelling emergent
 
 ### Benchmarks and Testbeds
 
-*Coming soon.*
+- [Agapiou et al. — Melting Pot 2.0 (DeepMind 2023)](https://arxiv.org/abs/2211.13746) `tool` — DeepMind's flagship evaluation suite for multi-agent reinforcement learning; provides 50+ complex social scenarios to test generalisation of cooperation, trust, and reciprocation in population-scale simulations.
+- [Google DeepMind — Kaggle Game Arena (2025)](https://www.kaggle.com/game-arena) `framework` — A persistent, dynamic benchmarking platform using games like Werewolf and Poker to evaluate AI agents' ability to reason under uncertainty, detect deception, and manage hidden information.
+- [Froger et al. — Gaia2: Benchmarking LLM Agents on Dynamic and Asynchronous Environments (Meta SuperIntelligence Labs 2026)](https://arxiv.org/abs/2602.11964) `framework` — A realistic, asynchronous benchmark where environments evolve independently of agent actions; tests temporal reasoning, ambiguity handling, and noise tolerance in complex agentic workflows.
+- [Anthropic — Agentic Misalignment Evaluations (2025)](https://www.anthropic.com/research/agentic-misalignment) `paper` — A high-fidelity red-teaming benchmark using simulated corporate environments to surface risky autonomous behaviours — such as blackmail or whistleblowing — when AI goals conflict with organizational constraints.
+- [Chuang et al. — DEBATE: A Large-Scale Benchmark for Role-Playing LLM Agents in Multi-Agent, Long-Form Debates (NeurIPS 2025)](https://openreview.net/pdf?id=7mWVbd4IXD) `dataset` — The first large-scale empirical benchmark for evaluating the authenticity of multi-agent group dynamics; compares LLM-simulated opinion trajectories against data from 2,792 human participants.
+- [Isomorphic Labs — Isomorphic Labs Drug Design Engine (IsoDDE) Technical Report (2026)](https://www.isomorphiclabs.com/articles/the-isomorphic-labs-drug-design-engine-unlocks-a-new-frontier) `framework` — A unified computational system surpassing AlphaFold 3 in protein-ligand structure prediction and binding affinity; introduces the 'Runs N' Poses' benchmark for testing generalisation to novel biological systems.
+- [Google Research — CURIE: Evaluating LLMs on Multitask Scientific Long-Context Understanding and Reasoning (ICLR 2025)](https://research.google/blog/evaluating-progress-of-llms-on-scientific-problem-solving/) `paper` — A multitask benchmark across six scientific disciplines (including materials science and geospatial analysis) that tests long-context reasoning, information extraction, and aggregation in realistic scientific workflows.
+- [Pan et al. — MACHIAVELLI Benchmark (ICML 2023)](https://proceedings.mlr.press/v202/pan23a.html) `paper` — A benchmark of 134 text-game social-decision simulations designed to measure trade-offs between utility-seeking and ethical behaviour, specifically surfacing power-seeking and deceptive tendencies in agents.
 
 ## Contributing
 
