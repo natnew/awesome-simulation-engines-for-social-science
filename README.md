@@ -9,7 +9,45 @@ Learned social simulation engines are composable, perturbable models of complex 
 ### Our Aim
 We are building the **scaffolding and implementation pathway** for an ecosystem of simulation engines. Rather than a single monolithic simulator, we envision a modular landscape of tool models representing bounded slices of social complexity—from labour markets and urban mobility to information diffusion and institutional behaviour.
 
-This work draws methodological inspiration from frontier AI for science (e.g., Virtual Cells, world models, and learned physical simulators) while addressing the unique observability, ethical, and validation constraints of social systems.
+```mermaid
+flowchart TD
+    Data["Empirical data and traces"]
+    Policy["Policy interventions"]
+
+    Data --> API
+    Policy --> API
+
+    subgraph Engine["Learned Social Simulation Engine"]
+        API["API-driven composability layer"]
+
+        subgraph Slices["Bounded social-system slices"]
+            Labour["Labour markets"]
+            Urban["Urban mobility"]
+            Info["Information diffusion"]
+            Institution["Institutional behaviour"]
+        end
+
+        API --> Labour
+        API --> Urban
+        API --> Info
+        API --> Institution
+    end
+
+    Labour --> Dynamics
+    Urban --> Dynamics
+    Info --> Risks
+    Institution --> Risks
+
+    Dynamics["Emergent social dynamics"]
+    Risks["Distributional risks and harms"]
+
+    Dynamics --> Landscapes
+    Risks --> Landscapes
+
+    Landscapes["Probability landscapes"]
+```
+
+
 
 ## Resource Map
 
