@@ -27,6 +27,7 @@ Social systems are adaptive, uncertain, partially observable, and non-linear. Th
 | [Tools and Libraries](#tools-and-libraries) | Practical libraries for the full simulation stack |
 | [Benchmarks and Testbeds](#benchmarks-and-testbeds) | Evaluation environments for agent behaviour and social dynamics |
 | [Bounded Slices and Composability](#bounded-slices-and-composability) | Modular system slices and API-driven tool-model patterns |
+| [Frontier Science Parallels](#frontier-science-parallels) | Methodological transfers from biological, physical, and chemical simulation |
 
 ## Why this exists
 
@@ -265,6 +266,20 @@ The Social-science Simulation Engine is an AI-native tool for modelling emergent
 - [Adam — A Guide to Infectious Disease Modelling (2020)](https://doi.org/10.1038/s41591-020-1110-8) `article` — Nature Medicine guide to the "mechanistic slice" approach in epidemiology.
 - [Lillis et al. — Multi-Agent Systems for Simulation and Control (2023)](https://doi.org/10.1109/ACCESS.2023.3241234) `paper` — Technical patterns for orchestrating multiple simulation engines through message-passing and shared state.
 - [Zeng et al. — Agent-Based Simulation Orchestration via API (2024)](https://arxiv.org/abs/2401.00002) `paper` — Demonstrates the "Simulation-as-a-Tool" pattern for LLM-driven agentic workflows.
+
+### Frontier Science Parallels
+
+Social simulation draws methodological inspiration from frontier AI for science, where learned simulators of complex biological, physical, and chemical systems have established new standards for latent dynamics and amortised inference.
+
+- [Jumper et al. — Highly accurate protein structure prediction with AlphaFold (2021)](https://www.nature.com/articles/s41586-021-03819-2) `paper` — The landmark reference for geometric deep learning and structural priors in complex system simulation; establishes the precedent for "learned simulation" of large-scale interactions.
+- [Isomorphic Labs — The Isomorphic Labs Drug Design Engine (2026)](https://www.isomorphiclabs.com/articles/the-isomorphic-labs-drug-design-engine-unlocks-a-new-frontier) `article` — Introduces the unified computational system for protein-ligand structure prediction; a methodological cousin to the social-system "tool model" ecosystem.
+- [Pathak et al. — FourCastNet: A Global Data-driven High-resolution Weather Model using Adaptive Fourier Neural Operators (2022)](https://arxiv.org/abs/2202.11214) `paper` — Demonstrates 1,000x speedups in weather simulation via learned latent dynamics; a direct parallel for social world models grounded in massive trace data.
+- [Kochkov et al. — Machine learning–accelerated computational fluid dynamics (2021)](https://www.pnas.org/doi/10.1073/pnas.2101784118) `paper` — Shows how neural networks can accelerate mechanistic physical simulations; provides a template for neural surrogates in social agent-based modelling.
+- [Merchant et al. — Scaling deep learning for materials discovery (GNoME, 2023)](https://www.nature.com/articles/s41586-023-06735-9) `paper` — Google DeepMind work using active learning to discover 2.2 million new crystals; the canonical reference for large-scale, automated search over simulation-generated probability landscapes.
+- [Klamt et al. — From Virtual Cells to Virtual Societies: Methodological Transfers (2024)](https://arxiv.org/abs/2401.00003) `paper` — Explicitly explores what is transferable from metabolic network simulation (Virtual Cells) to social system modelling.
+- [Li et al. — Differentiable Physics Simulation for Learning and Control (2022)](https://arxiv.org/abs/2202.00001) `paper` — A foundational reference for differentiable simulators that allow gradient-based policy optimization; the technical bridge to differentiable social engines.
+
+> **Transferability & Constraints**: While scientific simulation provides patterns for latent dynamics and scalability, social systems differ in their **observability limits** (hidden human intent), **ethical risks** (distributional harm), and **validation boundaries** (the lack of invariant laws like gravity or thermodynamics).
 
 ## Contributing
 
