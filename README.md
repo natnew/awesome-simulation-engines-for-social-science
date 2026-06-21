@@ -75,7 +75,7 @@ flowchart TD
 | [Frontier Science Parallels](#frontier-science-parallels) | Methodological transfers from biological, physical, and chemical simulation |
 | [Implementation Patterns](#implementation-patterns) | Engineering blueprints for differentiable ABMs, surrogates, and SBI pipelines |
 | [Evaluation and Validation](#evaluation-and-validation) | Trust discipline, history matching, and behavioural fidelity benchmarks |
-| [Architecture & Specs](./specs/) | Deep-dive blueprints, roadmaps, and requirements for engine phases |
+| [Documentation & Field Guide](./docs/) | Field-guide notes: landscape map, core concepts, and existing systems |
 
 ## Resources
 
