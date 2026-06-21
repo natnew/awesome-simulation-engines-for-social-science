@@ -1,0 +1,40 @@
+name: Report a broken or outdated link
+description: Flag a link that is dead, redirected, paywalled where it was not, or superseded
+title: "[broken link] <section — entry>"
+labels: ["broken-link"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Affected entry
+      description: Which entry, and in which section?
+      placeholder: "Agent-Based Modelling — Wilensky — NetLogo (1999)"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Broken link
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What is wrong?
+      options:
+        - Dead (404 / domain gone)
+        - Redirects somewhere unexpected
+        - Now paywalled / access changed
+        - Superseded by a newer canonical version
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: replacement
+    attributes:
+      label: Suggested replacement link (if known)
+      description: A stable replacement — DOI, publisher page, or official project page preferred.
+      placeholder: "https://doi.org/..."
+    validations:
+      required: false
