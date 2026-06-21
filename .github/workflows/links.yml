@@ -1,0 +1,49 @@
+name: Links
+
+on:
+  push:
+    branches: [main]
+    paths: ["**/*.md"]
+  pull_request:
+    paths: ["**/*.md"]
+  schedule:
+    # Weekly full external sweep (Mondays 06:00 UTC)
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  internal:
+    name: Internal links and anchors
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check relative links and heading anchors (offline)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Offline: validates local files and in-page fragments only.
+          # Deterministic — this is what gates pull requests.
+          args: --offline --include-fragments "**/*.md"
+          fail: true
+
+  external:
+    name: External links (non-blocking)
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check external URLs
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 403/429 are common when publishers block bots; treat as reachable
+          # rather than broken. Retries absorb transient failures.
+          args: >-
+            --accept 100..=103,200..=299,403,429
+            --max-retries 2
+            --retry-wait-time 5
+            --exclude-mail
+            "**/*.md"
+          # Visibility only — does not fail the build on external flakiness.
+          fail: false

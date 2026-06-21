@@ -1,0 +1,19 @@
+name: Question about scope or fit
+description: Ask whether a resource, topic, or contribution fits the list
+title: "[question] <short summary>"
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What would you like to clarify about what belongs in this list or how to contribute?
+    validations:
+      required: true
+  - type: input
+    id: context
+    attributes:
+      label: Relevant resource or section (optional)
+      placeholder: "e.g. a link you are unsure about, or a section you are reading"
+    validations:
+      required: false

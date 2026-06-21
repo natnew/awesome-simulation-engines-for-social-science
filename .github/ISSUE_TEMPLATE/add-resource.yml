@@ -1,0 +1,94 @@
+name: Add a resource
+description: Suggest a paper, tool, dataset, or other resource for the list
+title: "[resource] <Author — Title (Year)>"
+labels: ["add-resource"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing. Entries are curated by their contribution to building or understanding a learned social simulation engine — not by topic alone. Please complete the fields below; the maintainer (or you, in a PR) will format the final entry.
+
+        Final entry format:
+        `- [Author(s) — Title (Year)](url) ` + "`type`" + ` — one sentence on what it contributes to the simulation engine.`
+  - type: input
+    id: citation
+    attributes:
+      label: Author(s), title, year
+      placeholder: "Park et al. — Generative Agents: Interactive Simulacra of Human Behavior (2023)"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Stable link
+      description: Prefer a DOI, publisher page, or official project page over a blog post or mirror.
+      placeholder: "https://doi.org/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Resource type
+      options:
+        - paper
+        - book
+        - article
+        - tool
+        - framework
+        - course
+        - dataset
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Proposed section
+      description: Which existing section in the Resource Map does this belong under? If none fits, use "Propose a new section" instead.
+      options:
+        - Computational Social Science
+        - Complex Systems
+        - Social Simulation
+        - Microsimulation
+        - Causal Inference
+        - Uncertainty Quantification
+        - Responsible AI
+        - Existing Systems
+        - Agent-Based Modelling
+        - Synthetic Populations
+        - Multi-Agent Reinforcement Learning
+        - LLM-Based Social Simulation
+        - Machine-Learned World Models
+        - Policy and Intervention Modelling
+        - Ethical Risk Discovery
+        - Datasets and Empirical Grounding
+        - Tools and Libraries
+        - Benchmarks and Testbeds
+        - Bounded Slices and Composability
+        - Frontier Science Parallels
+        - Implementation Patterns
+        - Evaluation and Validation
+        - Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: One-line contribution
+      description: What does this resource contribute to building or understanding a simulation engine? State the contribution, not just the subject.
+      placeholder: "The landmark demonstration that LLM-driven agents can form relationships and coordinate events in a simulated town."
+    validations:
+      required: true
+  - type: checkboxes
+    id: quality-bar
+    attributes:
+      label: Quality bar
+      description: Entries are held to the bar in CONTRIBUTING.md.
+      options:
+        - label: This is the best available resource for the concept, not just a convenient one.
+          required: true
+        - label: The one-line contribution is clear to someone new to the area.
+          required: true
+        - label: The link is stable (DOI, publisher, or official project page where possible).
+          required: true
+        - label: I checked that this resource is not already listed (including cross-referenced sections).
+          required: true

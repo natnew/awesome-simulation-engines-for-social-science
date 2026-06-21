@@ -1,0 +1,37 @@
+name: Propose a new section
+description: Suggest a new section or a change to the taxonomy
+title: "[section] <proposed section name>"
+labels: ["taxonomy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        New sections change the shape of the list, so they are discussed before any PR. Please make the case for why existing sections do not already cover this.
+  - type: input
+    id: name
+    attributes:
+      label: Proposed section name
+      placeholder: "Norm Formation and Institutional Dynamics"
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why is a new section needed?
+      description: What does it cover that existing sections do not? Why is it durable rather than a passing topic?
+    validations:
+      required: true
+  - type: textarea
+    id: seed-entries
+    attributes:
+      label: Seed entries
+      description: List 3–5 strong candidate resources that would populate the section. A section with fewer than three quality entries is usually better as additions to an existing section.
+    validations:
+      required: true
+  - type: input
+    id: overlap
+    attributes:
+      label: Closest existing section
+      description: Which current section is nearest, and why is it not sufficient?
+    validations:
+      required: false
