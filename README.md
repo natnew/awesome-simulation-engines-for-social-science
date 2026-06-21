@@ -2,12 +2,34 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![GitHub stars](https://img.shields.io/github/stars/natnew/awesome-simulation-engines-for-social-science?style=social)](https://github.com/natnew/awesome-simulation-engines-for-social-science/stargazers) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub contributors](https://img.shields.io/github/contributors/natnew/awesome-simulation-engines-for-social-science)](https://github.com/natnew/awesome-simulation-engines-for-social-science/graphs/contributors)
 
-> **This repository is a research map for learned social simulation engines: methods, tools, datasets, and evaluation practices for modelling bounded social systems under intervention.**
+> A curated, functional map of systems that **learn, perturb, and validate** the dynamics of bounded social systems.
 
-Learned social simulation engines are composable, perturbable models of complex human systems. Unlike traditional simulations, they learn dynamics from data, represent uncertainty through probability landscapes, and allow for rigorous intervention testing in silico.
+**Learned social simulation engines** are composable, perturbable models of complex human systems. Unlike hand-coded simulations, they learn dynamics from data, represent uncertainty as probability landscapes rather than point predictions, and support rigorous intervention testing in silico. This list curates the methods, tools, datasets, and evaluation practices for building and understanding them — each entry annotated by what it contributes to an engine, not by topic alone.
 
-### Our Aim
-We are building the **scaffolding and implementation pathway** for an ecosystem of simulation engines. Rather than a single monolithic simulator, we envision a modular landscape of tool models representing bounded slices of social complexity—from labour markets and urban mobility to information diffusion and institutional behaviour.
+**Who this is for**
+
+- Computational social scientists and agent-based / multi-agent modellers
+- AI engineers building agent societies and synthetic populations
+- Policy and intervention modellers
+- Research agents needing a curated, machine-readable substrate
+
+**How to use this list**
+
+- Browse by **domain** in the [Resource Map](#resource-map) — labour markets, mobility, information diffusion, institutions, and more.
+- Read across by **function** in the [Functional lens](#functional-lens) — reconstruct, simulate, plan, calibrate, validate, risk.
+- Every entry carries a `type` label and a one-line statement of its contribution.
+
+**What belongs**
+
+- Primary research, maintained tools, canonical datasets, and benchmarks that advance the learned simulation of social systems.
+
+**What does not**
+
+- Generic AI/ML material with no social-simulation contribution, promotional pages, or unmaintained tools.
+
+### The engine vision
+
+Rather than a single monolithic simulator, the field is moving toward a modular landscape of tool models, each representing a bounded slice of social complexity — labour markets, urban mobility, information diffusion, institutional behaviour — composed through a shared interface and read out as probability landscapes rather than point forecasts.
 
 ```mermaid
 flowchart TD
@@ -51,31 +73,88 @@ flowchart TD
 
 ## Resource Map
 
+The list is grouped into tiers for navigation; the sections themselves are the primary taxonomy.
+
+**Foundations**
+
 | Section | What it contributes to the engine |
 |---|---|
 | [Computational Social Science](#computational-social-science) | Field foundations, methods, and policy-relevant applications |
 | [Complex Systems](#complex-systems) | Emergence, feedback loops, non-linearity, and adaptation |
+
+**Methods**
+
+| Section | What it contributes to the engine |
+|---|---|
 | [Social Simulation](#social-simulation) | Methodology, history, and landmark simulation systems |
 | [Microsimulation](#microsimulation) | Population-level policy modelling and distributional analysis |
-| [Causal Inference](#causal-inference) | Intervention reasoning and counterfactual logic |
-| [Uncertainty Quantification](#uncertainty-quantification) | Probability landscapes rather than single predictions |
-| [Responsible AI](#responsible-ai) | Risk surfacing, bias, governance, and ethical design |
-| [Existing Systems](#existing-systems) | End-to-end simulation platforms already in use |
 | [Agent-Based Modelling](#agent-based-modelling) | Micro-level behavioural simulation frameworks and protocols |
 | [Synthetic Populations](#synthetic-populations) | Population construction and demographic realism |
 | [Multi-Agent Reinforcement Learning](#multi-agent-reinforcement-learning) | Strategic interaction, cooperation, competition, and adaptation |
 | [LLM-Based Social Simulation](#llm-based-social-simulation) | Generative agents, LLM societies, and language-mediated behaviour |
 | [Machine-Learned World Models](#machine-learned-world-models) | Learned simulation dynamics and latent environment models |
+
+**Engines, systems & composability**
+
+| Section | What it contributes to the engine |
+|---|---|
+| [Existing Systems](#existing-systems) | End-to-end simulation platforms already in use |
+| [Bounded Slices and Composability](#bounded-slices-and-composability) | Modular system slices and API-driven tool-model patterns |
+| [Implementation Patterns](#implementation-patterns) | Engineering blueprints for differentiable ABMs, surrogates, and SBI pipelines |
+
+**Reasoning & intervention**
+
+| Section | What it contributes to the engine |
+|---|---|
+| [Causal Inference](#causal-inference) | Intervention reasoning and counterfactual logic |
 | [Policy and Intervention Modelling](#policy-and-intervention-modelling) | Governance, decision-support, and policy experiment examples |
+
+**Calibration, validation & benchmarks**
+
+| Section | What it contributes to the engine |
+|---|---|
+| [Uncertainty Quantification](#uncertainty-quantification) | Probability landscapes rather than single predictions |
+| [Evaluation and Validation](#evaluation-and-validation) | Trust discipline, history matching, and behavioural fidelity benchmarks |
+| [Benchmarks and Testbeds](#benchmarks-and-testbeds) | Evaluation environments for agent behaviour and social dynamics |
+
+**Risk & responsibility**
+
+| Section | What it contributes to the engine |
+|---|---|
+| [Responsible AI](#responsible-ai) | Risk surfacing, bias, governance, and ethical design |
 | [Ethical Risk Discovery](#ethical-risk-discovery) | Second-order harms, distributional risk, and misuse pathways |
+
+**Substrate & tooling**
+
+| Section | What it contributes to the engine |
+|---|---|
 | [Datasets and Empirical Grounding](#datasets-and-empirical-grounding) | Empirical grounding for synthetic societies and calibration |
 | [Tools and Libraries](#tools-and-libraries) | Practical libraries for the full simulation stack |
-| [Benchmarks and Testbeds](#benchmarks-and-testbeds) | Evaluation environments for agent behaviour and social dynamics |
-| [Bounded Slices and Composability](#bounded-slices-and-composability) | Modular system slices and API-driven tool-model patterns |
+
+**Parallels & documentation**
+
+| Section | What it contributes to the engine |
+|---|---|
 | [Frontier Science Parallels](#frontier-science-parallels) | Methodological transfers from biological, physical, and chemical simulation |
-| [Implementation Patterns](#implementation-patterns) | Engineering blueprints for differentiable ABMs, surrogates, and SBI pipelines |
-| [Evaluation and Validation](#evaluation-and-validation) | Trust discipline, history matching, and behavioural fidelity benchmarks |
 | [Documentation & Field Guide](./docs/) | Field-guide notes: landscape map, core concepts, and existing systems |
+
+**Entry types:** `paper` peer-reviewed paper or preprint · `book` · `article` essay, report, or news feature · `tool` library, framework, or platform · `framework` standard, protocol, or reference framework · `dataset` · `chapter` book chapter.
+
+## Functional lens
+
+The domain sections are the primary taxonomy. This functional lens is a secondary, cross-cutting view: it groups systems by what they *do* inside an engine, adapting the renderer / simulator / planner distinction from world-model research to social systems.
+
+- **Reconstruct** — produce or reconstruct observable social state: synthetic populations, digital twins, generative agents as a population substrate.
+- **Simulate** — model transitions, interactions, and counterfactuals: agent-based models, microsimulation, multi-agent reinforcement learning, learned world models, neural surrogates.
+- **Plan** — use simulated futures to choose actions: reinforcement learning over simulators, policy and mechanism design, causal intervention layers.
+
+Social systems lack the invariant laws of physical world models, so three further cross-cutting categories are first-class rather than optional:
+
+- **Calibrate** — fit a simulator to data: simulation-based inference, history matching.
+- **Validate** — establish trust: uncertainty quantification, behavioural-fidelity benchmarks, model documentation.
+- **Risk** — surface second-order and distributional harms, and leakage from synthetic populations.
+
+The lens is piloted on [Existing Systems](#existing-systems) below; tags can be extended to other sections over time.
 
 ## Resources
 
@@ -139,6 +218,16 @@ flowchart TD
 - [NIST — Artificial Intelligence Risk Management Framework (AI RMF 1.0) (2023)](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10) `framework` — The leading voluntary framework for managing AI risk across the full system lifecycle; covers trustworthiness, accountability, bias, and governance for AI-assisted policy and simulation tools.
 
 ### Existing Systems
+
+_Functional lens pilot — primary role of each system (see [Functional lens](#functional-lens)):_
+
+| System | Function |
+|---|---|
+| Concordia | simulate |
+| Project Sid | simulate · plan |
+| OASIS | simulate |
+| Out of One, Many | reconstruct |
+| Economic Simulations with AI | simulate · plan |
 
 - [Vezhnevets et al. — Concordia: Generative Agent-Based Modelling with Actions Grounded in Physical, Social, or Digital Space (2023)](https://arxiv.org/abs/2312.03664) `tool` — Google DeepMind's open-source library for building LLM-driven multi-agent simulations grounded in physical or digital environments; the reference engine from a leading AI lab for social science modelling with generative agents.
 - [Altera.AL — Project Sid: Many-Agent Simulations Toward AI Civilization (2024)](https://arxiv.org/abs/2411.00114) `paper` — Demonstrates 10–1,000+ AI agents developing specialised professions, governance structures, cultural norms, and economic systems in a shared environment; the most ambitious published test of emergent civilisational dynamics in an AI simulation engine.

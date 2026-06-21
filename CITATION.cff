@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: Awesome Learned Social Simulation Engines
+message: >-
+  If you use this curated list in your research, please cite it
+  using the metadata below.
+type: dataset
+abstract: >-
+  A curated, functional map of learned social simulation engines:
+  methods, tools, datasets, and evaluation practices for modelling
+  and perturbing the dynamics of bounded social systems.
+authors:
+  - given-names: Natasha
+    family-names: Newbold
+    alias: natnew
+repository-code: >-
+  https://github.com/natnew/awesome-simulation-engines-for-social-science
+url: >-
+  https://github.com/natnew/awesome-simulation-engines-for-social-science
+license: MIT
+keywords:
+  - social simulation
+  - agent-based modelling
+  - world models
+  - computational social science
+  - synthetic populations
+  - multi-agent reinforcement learning
+  - simulation-based inference
+  - awesome list
