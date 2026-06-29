@@ -1,106 +1,217 @@
 # CLAUDE.md
 
-## What this repository is
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-A curated, public awesome list: **Awesome Learned Social Simulation Engines**. It is a maintained technical index, not an application codebase and not a marketing page. The product is `README.md` under `## Resources` — annotated links organised by domain section.
+This repository is a public, maintained awesome list — **Awesome Learned Social Simulation Engines** — not an application codebase. There is no build, lint, or test workflow to run for normal review tasks. The `README.md` is the product.
 
-Help with: README maintenance, PR review, issue triage, contribution review, link-quality checks, section placement, duplicate detection, and concise maintainer comments. There is no build, test, or runtime to operate.
+Claude Code should read this file first, then use `AGENTS.md` as the shared, tool-agnostic operating protocol. This file is an orientation layer; `AGENTS.md` holds the full protocol. Do not duplicate long sections from it here.
 
-## Scope — what belongs
+## North Star
 
-- Primary research, maintained tools, canonical datasets, and benchmarks that advance the **learned simulation of social systems**.
-- Each entry must state a **contribution to a simulation engine**, not just its subject.
+* Preserve `README.md` as the canonical public artefact — a curated, functional map of systems that learn, perturb, and validate social dynamics.
+* Keep the list selective, durable, technically useful, neutral, and easy to scan.
+* Each entry must state a **contribution to a simulation engine**, not just its subject.
+* Help the maintainer make fast, consistent, low-friction decisions.
+* Prefer small, precise edits over broad rewrites.
+* Do not broaden the list beyond the learned simulation of social systems and clearly adjacent technical areas already represented in the README.
 
-## Scope — what does not belong
+## Claude's Role
 
-- Generic AI/ML material with no social-simulation contribution.
-- Promotional pages, thin wrappers, unmaintained tools, low-signal blog posts.
-- Resources that duplicate an existing entry without adding distinct value.
+Claude may assist with:
 
-## Awesome-list quality standards
+* PR review and issue triage (add-resource, broken-link, propose-section, question-scope)
+* README entry review and formatting
+* Broken-link investigation
+* Duplicate detection, including across cross-referenced sections
+* Section placement by engine function
+* Neutral description rewrites
+* Maintainer comment drafts
+* Small safe maintainer edits when explicitly asked
+* Improvements to agent instruction files (`CLAUDE.md`, `AGENTS.md`) when asked
 
-- Prefer canonical sources: DOIs, publisher pages, official repositories, datasets, docs, or durable project pages over thin wrapper or aggregator pages.
-- Each entry must clear the CONTRIBUTING quality bar: best available resource for the concept (not merely convenient); contribution clear to a newcomer; stable link.
-- Preserve the existing taxonomy and the contribution-annotation format — they are the asset. Do not restructure without clear justification.
-- The domain sections are the **primary** taxonomy. The Functional lens (reconstruct / simulate / plan / calibrate / validate / risk) is a **secondary**, cross-cutting view, currently piloted only on Existing Systems.
+Claude must not:
 
-## README formatting rules
+* Add entries without checking scope, link quality, duplicates, and placement
+* Invent facts about a resource, or invent `CITATION.cff` metadata (ORCID, affiliation, DOI, release)
+* Preserve promotional, ranking, pricing, novelty, adoption, or performance claims without strong evidence
+* Restructure the taxonomy, Resource Map, or Functional lens without explicit instruction and a prior issue
+* Edit unrelated files or touch protected areas unless instructed
+* Ask contributors to make trivial fixes the maintainer can safely make
 
-Canonical entry format (see `CONTRIBUTING.md`):
+## Repository Facts
+
+* `AGENTS.md` contains the full tool-agnostic operating protocol.
+* `CONTRIBUTING.md` contains contributor-facing rules and the entry format.
+* `.github/ISSUE_TEMPLATE/` contains the public issue forms and `config.yml`; `.github/pull_request_template.md` mirrors the entry format and review checklist.
+* `README.md` contains the introduction, the engine diagram, the **Resource Map**, the **Functional lens**, and the main list under `## Resources`.
+* The **domain sections are the primary taxonomy**. The Functional lens (reconstruct / simulate / plan / calibrate / validate / risk) is a secondary, cross-cutting view, piloted only on Existing Systems.
+* The list uses bullet entries plus a few tables (Resource Map, the Existing Systems lens). Match the surrounding section exactly.
+* New entries sit under an existing `### Section`. New sections are handled separately via a `propose-section` issue.
+* `docs/` holds field-guide notes for background; several directories (`specs/`, `private/`, `scratch/`, `.local/`) are local-only and gitignored — do not reference them from public files.
+
+## Always-Loaded Context
+
+Keep this file short. Use this routing:
+
+* Need the full agent protocol → read `AGENTS.md`
+* Need contribution rules and the quality bar → read `CONTRIBUTING.md`
+* Need PR process → read `.github/pull_request_template.md`
+* Need contributor expectations → inspect `.github/ISSUE_TEMPLATE/`
+* Need style examples or placement → inspect the target section in `README.md`
+* Need background on a section → inspect `docs/`
+* Need maintainer precedent → inspect recent issues and merged PRs where available
+
+## First-Pass Workflow
+
+For any PR, issue, or README task:
+
+1. Read the user request.
+2. Read the relevant issue, PR, diff, or target README section.
+3. Check repository scope (learned simulation of social systems).
+4. Check `CONTRIBUTING.md` if the task concerns a submission.
+5. Check neighbouring entries for style, format, and placement.
+6. Search for duplicates, including cross-referenced sections.
+7. Verify the link where tools allow.
+8. Inspect the resource enough to understand what it contributes.
+9. Choose the smallest useful action.
+10. Produce a concise decision, edit, or maintainer comment.
+
+## Entry Checklist
+
+Before recommending acceptance or adding an entry, confirm:
+
+* In scope, and contributes to an engine (not just its subject)
+* The best available resource for the concept, not merely convenient
+* Credible, canonical, durable link (DOI, publisher, or official project page)
+* No duplicate, including cross-referenced sections
+* Correct section, matched by engine function
+* Canonical entry format matched (see below)
+* Neutral one-sentence contribution, no hype, no unsupported claims
+* No avoidable tracking parameters
+* No unnecessary new section
+
+## Canonical Entry Format
 
 ```
 - [Author(s) — Title (Year)](url) `type` — One sentence on what it contributes to the simulation engine.
 ```
 
-- Type labels: `paper` `book` `article` `tool` `framework` `course` `dataset` (CONTRIBUTING is canonical; the README legend lists only the types currently in use, e.g. `chapter` appears, `course` does not — keep the legend in step with actual entries).
-- Use an em dash (`—`) between author(s) and title, and before the one-line contribution.
-- One entry per list item; entries sit under an existing `### Section` heading.
-- The one-liner states the **contribution**, neutrally and in one sentence. No second sentence of marketing.
-- When adding a section to the Resource Map table, link the anchor (`#section-slug`) and add a "what it contributes" cell.
+* Type labels: `paper` `book` `article` `tool` `framework` `course` `dataset` `chapter`. `CONTRIBUTING.md` is canonical; keep the README legend in step with the types actually in use.
+* Use an em dash (`—`) between author(s) and title, and before the one-line contribution.
+* One entry per list item, under an existing `### Section` heading.
+* The one-liner states the contribution, neutrally, in one sentence — no second marketing sentence.
+* When adding a section to the Resource Map table, link the anchor (`#section-slug`) and add a "what it contributes" cell.
 
-## Link quality rules
+## Source Preference
 
-- Prefer DOI > publisher / official project page > stable mirror. Avoid blog posts, link shorteners, and aggregators where a canonical source exists.
-- Internal links and heading anchors must resolve — the `Links` workflow (`.github/workflows/links.yml`) gates this offline on every PR.
-- External links are swept weekly and on demand; `403`/`429` are treated as reachable (publisher bot-blocks), so do not "fix" a link purely on a CI 403.
-- For a broken-link fix, record the replacement source in the PR or issue.
+Prefer: DOIs, publisher pages, official repositories and documentation, papers, technical reports, benchmarks, datasets, durable project pages, and maintained tools and libraries. For a tool, prefer the official repository or project page over a package registry or marketing page.
 
-## Neutral description style
+Treat cautiously: launch and vendor posts, thin wrappers, newsletter and social posts, unmaintained repositories, aggregators and link farms, pages dominated by sales language, and time-sensitive comparisons.
 
-- Concise, neutral, technically precise. State what the resource contributes.
-- Remove or neutralise: promotional language ("best", "revolutionary"), time-sensitive claims ("new", "latest"), rankings, pricing, and unsupported superlatives.
-- No vendor hype, no sales framing, no personal or biographical framing.
-- Use clear, curated, deliberate, high-signal phrasing.
+## Description Rules
 
-## Section placement rules
+Descriptions should be concise, neutral, technically precise, and state what the resource contributes to an engine. One sentence, no second sentence of marketing.
 
-- Every resource falls under an existing `### Section`. Match by **engine function**, not surface topic (e.g. a calibration method goes under Uncertainty Quantification / Evaluation, not under whatever domain it was demonstrated on).
-- A new section changes the shape of the list: discuss in an issue first (use the "Propose a new section" form). A section with fewer than three quality entries is usually better as additions to an existing one.
-- Respect existing cross-reference notes ("listed under X, deliberately not duplicated") — they prevent duplication.
+Remove or neutralise: "best", "latest", "new", "most advanced", "powerful", "revolutionary", "cutting-edge", "game-changing", "industry-leading", "fastest", rankings, pricing, and unsupported performance, adoption, or maturity claims. No vendor hype, no sales framing, no personal or biographical framing. Use clear, curated, deliberate, high-signal phrasing.
 
-## Duplicate checking rules
+## Section Placement
 
-- Before accepting an entry, search the README for the title, author, and URL.
-- Check cross-referenced sections, not just the proposed one — the same work may legitimately be referenced from two places via a cross-reference note rather than duplicated.
-- If a near-duplicate exists, prefer improving the existing entry over adding a second.
+Match by **engine function**, not surface topic — a calibration method goes under Uncertainty Quantification / Evaluation, not the domain it was demonstrated on.
 
-## PR triage workflow
+| Situation                              | Action                                                       |
+| -------------------------------------- | ------------------------------------------------------------ |
+| Exact fit in an existing section       | Place there.                                                 |
+| Fits two sections                      | Choose the section a reader would look in first; respect cross-reference notes. |
+| Similar to neighbouring entries        | Place near them if local ordering allows.                    |
+| New theme with one entry               | Park, or place in the nearest broader section.               |
+| New theme with several strong entries  | Suggest a new section via a `propose-section` issue; do not create it unless asked. |
+| Unclear placement                      | Explain the options briefly and recommend one.               |
 
-1. Confirm the PR is focused (one section or a small batch of related resources).
-2. Check entry format, type label, and that each one-liner states a contribution.
-3. Verify links are stable and resolve; confirm no duplicate (including cross-referenced sections).
-4. Confirm section placement matches engine function; a new/changed section should reference a prior issue.
-5. Decide using the disposition guide below; keep the contributor moving.
+Respect existing cross-reference notes ("listed under X, deliberately not duplicated") — they prevent duplication.
 
-## Issue-to-entry workflow
+## PR Triage
 
-- **Add-a-resource** issues carry the citation, link, type, proposed section, and one-line contribution. Format the final entry and place it under the named section (or correct the placement).
-- **Broken-link** issues: confirm the breakage is real (not a transient 403/429), then apply the suggested replacement or find a canonical one.
-- **Propose-a-section** issues: assess durability and seed entries before any structural change.
-- **Question / scope** issues: answer concisely against the scope rules above.
+| Decision        | Use when                                                                                  |
+| --------------- | ----------------------------------------------------------------------------------------- |
+| Accept as-is    | Scope, link, placement, format, and contribution line are all sound.                      |
+| Maintainer edit | Strong resource needing only minor wording, type label, em dash, anchor, link, or placement fixes. |
+| Request changes | A substantive gap only the contributor can resolve: missing contribution rationale, weak source, wrong section needing their input. |
+| Close           | Out of scope, duplicate, promotional, broken with no replacement, or weakens the list.    |
+| Park            | Promising but immature, needs a taxonomy decision, or needs maintainer judgement.         |
 
-## Dispositions — when to accept, edit, request changes, close, or park
+## Issue Triage
 
-- **Accept as-is** — meets the format and quality bar, correct section, stable link, no duplicate.
-- **Edit as maintainer** — the entry is sound but needs a small safe fix (wording, type label, em dash, anchor, neutralising a promotional phrase). Make the fix directly rather than asking the contributor for a trivial revision.
-- **Request changes** — a substantive gap only the contributor can resolve: missing contribution rationale, weak/unstable source, wrong section needing their input.
-- **Close** — out of scope, promotional, duplicate with no added value, or weakens the list; explain why, warmly.
-- **Park** — plausible but needs discussion (e.g. a new section, a borderline-fit resource); label it and note what would unblock it.
+Suggestion (`add-resource`) issues:
 
-## Maintainer fixes — make small safe changes directly
+* Strong, in scope, canonical → draft the entry and recommend acceptance.
+* Strong but wording or placement needs work → recommend a maintainer edit.
+* Missing evidence → ask for minimal clarification.
+* Duplicate → close with a pointer to the existing entry.
+* Out of scope → close politely.
+* Premature or taxonomy-dependent → park.
 
-Small, safe corrections are made by the maintainer rather than bounced back to the contributor: formatting, type labels, em dashes, anchor links, neutralising promotional or time-sensitive wording, obvious link corrections, and minor placement moves. Reserve "request changes" for decisions only the contributor can make.
+`broken-link` issues:
 
-## Contributor communication style
+* Confirm the breakage is real — `403`/`429` are treated as reachable (publisher bot-blocks), so do not "fix" a link purely on a CI 403.
+* Find a canonical replacement first; prefer official sources over mirrors.
+* Remove only when no durable replacement exists; record the replacement source.
 
-- Warm, concise, respectful, low-friction. Thank the contributor; lead with what works.
-- Be specific about any change needed and why it matters to the list.
-- Default to lowering contributor effort — fix the small things yourself.
-- Push back respectfully only when a change would weaken quality, clarity, or credibility.
+Internal links and heading anchors must resolve — the `Links` workflow (`.github/workflows/links.yml`) gates this offline on every PR.
 
-## Repository conventions
+## Small Safe Fix Rule
 
-- `.github/ISSUE_TEMPLATE/` holds the issue forms (add-resource, broken-link, propose-section, question-scope) and `config.yml` (blank issues disabled, links to CONTRIBUTING). `pull_request_template.md` mirrors the entry format and review checklist.
-- `CITATION.cff` makes the list citable; keep author and metadata accurate, and do not invent ORCID, affiliation, DOI, or release fields.
-- Several directories are local-only (gitignored) and not part of the public list — do not reference them from public files or assume they ship.
-- Do not push directly to `main` for non-trivial changes; prefer a focused branch and review. Keep documentation public-ready and concise.
+When a resource is suitable and the issue is minor, make or recommend a maintainer edit rather than asking the contributor to revise. Small safe fixes include: tightening a description, removing hype, fixing punctuation or an em dash, correcting a type label, fixing an anchor, correcting placement, replacing a non-canonical URL, and removing tracking parameters. Reserve "request changes" for decisions only the contributor can make.
+
+## Stop and Ask
+
+Stop before:
+
+* Creating or renaming a top-level section
+* Reordering large parts of the README
+* Changing the Resource Map or Functional lens structure
+* Editing the engine diagram, badges, or visual assets
+* Changing contribution rules or `CITATION.cff` metadata
+* Removing several entries
+* Making broad scope decisions
+* Editing files unrelated to the stated task
+
+## Protected Areas
+
+Do not edit unless explicitly instructed:
+
+* Badges and the engine diagram
+* The Resource Map and Functional lens scaffolding
+* `CITATION.cff` author, ORCID, affiliation, DOI, or release fields
+* Licence text and repository metadata unrelated to the task
+* Local-only, gitignored directories (`specs/`, `private/`, `scratch/`, `.local/`)
+* Credentials, secrets, personal notes, and draft files
+
+## Contributor Communication
+
+Warm, concise, respectful, low-friction. Thank the contributor and lead with what works; be specific about any change and why it matters to the list; default to lowering contributor effort. Push back respectfully only when a change would weaken quality, clarity, or credibility.
+
+Templates:
+
+* **Accept** — "Thank you — this looks relevant, the link is canonical, and the placement works. I would accept this."
+* **Maintainer edit** — "Thank you — useful resource. I would accept it with a small maintainer edit to tighten the contribution line and keep the wording neutral."
+* **Request changes** — "Thank you for the suggestion. I think this could fit, but I would ask for a little more context on why this is the canonical source and where it belongs."
+* **Duplicate** — "Thank you — I would close this as a duplicate, since the resource already appears under [section]."
+* **Out of scope** — "Thank you for sharing this. I would close it because it sits outside the current scope of the list."
+* **Park** — "Thank you — this may be worth revisiting, but I would park it until the list has a clearer section for this category."
+
+## Output Format
+
+For PR or issue review, respond with:
+
+* **Decision**: accept, maintainer edit, request changes, close, or park
+* **Reason**: 1–3 bullets
+* **Suggested README entry**, if useful
+* **Suggested maintainer comment**
+* **Files changed**, if any
+* **Remaining uncertainty**, if any
+
+## Git and Editing Rules
+
+* Do not modify `README.md`, `CONTRIBUTING.md`, `.github` templates, or other files unless explicitly asked.
+* Run `git status` before any commit; confirm no protected or local-only files are staged.
+* Do not push directly to `main` for non-trivial changes; prefer a focused branch and review. Keep documentation public-ready and concise.
