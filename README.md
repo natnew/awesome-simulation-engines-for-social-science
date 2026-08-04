@@ -116,6 +116,7 @@ The list is grouped into tiers for navigation; the sections themselves are the p
 | [Uncertainty Quantification](#uncertainty-quantification) | Probability landscapes rather than single predictions |
 | [Evaluation and Validation](#evaluation-and-validation) | Trust discipline, history matching, and behavioural fidelity benchmarks |
 | [Benchmarks and Testbeds](#benchmarks-and-testbeds) | Evaluation environments for agent behaviour and social dynamics |
+| [Standards and Reproducibility](#standards-and-reproducibility) | Machine-readable model descriptions and reproducible simulation protocols |
 
 **Risk & responsibility**
 
@@ -434,6 +435,10 @@ _Functional lens pilot — primary role of each system (see [Functional lens](#f
 - [Grimm et al. — The ODD Protocol for Describing Agent-Based and Other Simulation Models (2020)](https://www.jasss.org/23/2/7.html) `framework` — The international standard for model documentation, ensuring technical replicability and structural transparency.
 - [Lueckmann et al. — Benchmarking Simulation-Based Inference (2021)](https://arxiv.org/abs/2101.04653) `paper` — A comprehensive benchmark suite for choosing the right calibration algorithm for high-dimensional social simulators.
 - [Park et al. — Generative Agent Simulations of 1,000 People (2024)](https://arxiv.org/abs/2411.10109) `paper` — Establishes the 85% test-retest reliability benchmark for synthetic agents against real US population survey data.
+
+### Standards and Reproducibility
+
+- [VISA authors — VISA: A Structured Description Protocol for Agent-Based Simulation Models Towards Machine Reproducibility (2026)](https://arxiv.org/abs/2607.28027) `framework` — Defines a structured protocol for machine-readable agent-based model descriptions that supports automated model reconstruction and reproducible simulation.
 
 ## Contributing
 
