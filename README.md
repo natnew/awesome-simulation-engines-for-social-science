@@ -438,7 +438,7 @@ _Functional lens pilot — primary role of each system (see [Functional lens](#f
 
 ### Standards and Reproducibility
 
-- [VISA authors — VISA: A Structured Description Protocol for Agent-Based Simulation Models Towards Machine Reproducibility (2026)](https://arxiv.org/abs/2607.28027) `paper` — Defines a structured protocol for machine-readable agent-based model descriptions that supports automated model reconstruction and reproducible simulation.
+- [VISA authors — VISA: A Structured Description Protocol for Agent-Based Simulation Models Towards Machine Reproducibility (2026)](https://arxiv.org/abs/2607.28027) `framework` — Defines a structured protocol for machine-readable agent-based model descriptions that supports automated model reconstruction and reproducible simulation.
 
 ## Contributing
 
