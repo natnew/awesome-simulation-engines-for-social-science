@@ -21,7 +21,7 @@ Each new entry follows:
 
 `- [Author(s) — Title (Year)](url) ` + "`type`" + ` — one sentence on what it contributes to the simulation engine.`
 
-Type labels: `paper` `book` `article` `tool` `framework` `course` `dataset`
+Type labels: `paper` `book` `article` `tool` `framework` `course` `dataset` `chapter`
 
 ## Checklist
 

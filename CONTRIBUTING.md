@@ -11,7 +11,7 @@ Contributions of every size are welcome — a new resource, a better description
    - [Author(s) — Title (Year)](url) `type` — One sentence on what it contributes to the simulation engine.
    ```
 
-3. Use one of these type labels: `paper` `book` `article` `tool` `framework` `course` `dataset`
+3. Use one of these type labels: `paper` `book` `article` `tool` `framework` `course` `dataset` `chapter`
 
 4. Keep the one-liner focused on what the resource contributes to building or understanding a social simulation engine — not just what the resource is about.
 
