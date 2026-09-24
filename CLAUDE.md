@@ -25,7 +25,7 @@ Claude-specific operating layer for **Awesome Learned Social Simulation Engines*
   ```
 - Place by **engine function**, not surface topic. Respect `> Cross-references: … deliberately not duplicated` notes; they are deliberate de-duplication, so never re-add a resource they point elsewhere.
 - Domain sections are the primary taxonomy. The Resource Map and Functional lens (only piloted in the Existing Systems table) are protected scaffolding.
-- Type labels: the README legend (`README.md`, "Entry types") matches what is in use, including `chapter`. `CONTRIBUTING.md` and the PR template omit `chapter` and list the unused `course`. Treat that as known drift: don't copy it, and fix it only when asked.
+- Type labels: `paper` `book` `article` `tool` `framework` `course` `dataset` `chapter` (same list in `AGENTS.md`, `CONTRIBUTING.md`, and the PR template). The README "Entry types" legend lists only the labels in use, so add a label to it when its first entry lands.
 - Never invent resource facts or `CITATION.cff` metadata. Strip hype, rankings, and unsupported "state of the art" or "most-cited" claims from new or edited lines; don't sweep existing entries unless asked.
 
 ## Repo gotchas
