@@ -32,7 +32,7 @@ HYPE = re.compile(
     re.IGNORECASE,
 )
 # Rules reported as warnings. A rule graduates to an error by leaving this set.
-WARN_RULES = {"year"}
+WARN_RULES: set[str] = set()
 
 
 def url_key(url: str) -> str:
@@ -58,7 +58,7 @@ def sentence_count(text: str) -> int:
 def parse_readme(readme: str):
     """Return (entries, sections, map_anchors, legend_types, notes)."""
     entries, sections, notes = [], [], []
-    map_anchors, legend = set(), []
+    map_anchors, legend = [], []
     part, section = None, None
     for n, line in enumerate(readme.splitlines(), 1):
         if line.startswith("## "):
@@ -70,7 +70,7 @@ def parse_readme(readme: str):
             continue
         if part == "Resource Map" and line.startswith("| ["):
             if m := re.match(r"\| \[[^\]]+\]\(#([^)]+)\)", line):
-                map_anchors.add(m.group(1))
+                map_anchors.append(m.group(1))
         if line.startswith("**Entry types:**"):
             legend = re.findall(r"`([a-z]+)`", line)
         if section and line.startswith("> Cross-references:"):
@@ -149,8 +149,10 @@ def check(readme: str, contributing: str, others: dict[str, str], issue_form: st
     missing = [s for s in sections if anchor(s) not in map_anchors]
     for s in missing:
         report("map", "README.md", f"section '{s}' is missing from the Resource Map")
-    for a in sorted(map_anchors - set(by_anchor)):
+    for a in sorted(set(map_anchors) - set(by_anchor)):
         report("map", "README.md", f"Resource Map links to #{a}, which is not a Resources section")
+    if not missing and [a for a in map_anchors if a in by_anchor] != [anchor(s) for s in sections]:
+        report("map", "README.md", "Resources sections must appear in the same order as the Resource Map")
 
     if legend and set(legend) != used_types:
         report("sync", "README.md", f"Entry types legend {sorted(legend)} != types in use {sorted(used_types)}")

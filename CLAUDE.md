@@ -24,7 +24,7 @@ Claude-specific operating layer for **Awesome Learned Social Simulation Engines*
   - [Author(s) — Title (Year)](url) `type` — One neutral sentence on what it contributes to the simulation engine.
   ```
 - Place by **engine function**, not surface topic. Respect `> Cross-references: … deliberately not duplicated` notes; they are deliberate de-duplication, so never re-add a resource they point elsewhere.
-- Domain sections are the primary taxonomy. The Resource Map and Functional lens (only piloted in the Existing Systems table) are protected scaffolding.
+- Sections are the primary taxonomy; `AGENTS.md` → Entry Format and Placement lists the boundaries between overlapping sections. The Resource Map (tiers, body order, and a Function column) and the Existing Systems function table are protected scaffolding, and the checker fails if the map and body disagree.
 - Type labels: `paper` `book` `article` `tool` `framework` `course` `dataset` `chapter`. `CONTRIBUTING.md` is the source list; `scripts/check_readme.py` fails if this file, `AGENTS.md`, the PR template, or the `add-resource` form drift from it, or if the README "Entry types" legend differs from the labels in use.
 - Never invent resource facts or `CITATION.cff` metadata. Contributions are one neutral sentence of at most 250 characters, without rankings, superlatives, adoption claims, or institution name-drops; the checker rejects common hype terms, but unsupported claims in plain words are still yours to remove.
 

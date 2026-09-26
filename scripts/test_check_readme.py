@@ -79,6 +79,10 @@ class CheckReadme(unittest.TestCase):
     def test_resource_map_must_list_every_section(self):
         self.assertIn("map", rules(README.replace("| [Beta](#beta) | x |\n", "")))
 
+    def test_sections_follow_resource_map_order(self):
+        swapped = README.replace("| [Alpha](#alpha) | x |\n| [Beta](#beta) | x |", "| [Beta](#beta) | x |\n| [Alpha](#alpha) | x |")
+        self.assertIn("map", rules(swapped))
+
     def test_label_and_section_lists_stay_in_sync(self):
         self.assertIn("sync", rules(others={"AGENTS.md": "* Types: `paper`.\n"}))
         self.assertIn("sync", rules(form=FORM.replace("        - Beta\n", "")))

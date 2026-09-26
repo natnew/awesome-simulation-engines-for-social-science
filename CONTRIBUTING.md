@@ -4,7 +4,7 @@ Contributions of every size are welcome — a new resource, a better description
 
 ## How to add a resource
 
-1. Find the right section in `README.md` under `## Resources`.
+1. Find the right section in the README's [Resource Map](README.md#resource-map). Place by what the resource does for a simulation engine, not its topic; for borderline cases, see the placement boundaries in [`AGENTS.md`](AGENTS.md#entry-format-and-placement).
 2. Add your entry as a list item in this format:
 
    ```
