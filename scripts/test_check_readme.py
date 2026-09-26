@@ -60,11 +60,14 @@ class CheckReadme(unittest.TestCase):
             "year": entry.replace(" (2021)", ""),
             "length": entry.replace("another thing.", "x" * 300 + "."),
             "hype": entry.replace("another", "the canonical"),
+            "superlative": entry.replace("another thing", "the most complete toolkit"),
+            "prescriptive": entry.replace("another thing", "what every modeller should read"),
             "sentences": entry.replace("thing.", "thing. Freely available online."),
         }
         for rule, bad in cases.items():
             with self.subTest(rule=rule):
-                self.assertIn(rule, rules(README.replace(entry, bad)))
+                expected = "hype" if rule in ("superlative", "prescriptive") else rule
+                self.assertIn(expected, rules(README.replace(entry, bad)))
 
     def test_duplicate_detects_same_arxiv_id_across_url_forms(self):
         dup = "- [Doe — Again (2020)](https://arxiv.org/pdf/2001.00001) `paper` — Repeats it.\n"

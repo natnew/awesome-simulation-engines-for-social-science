@@ -26,11 +26,13 @@ MAX_DESC = 250
 HYPE = re.compile(
     r"\b(canonical|landmark|definitive|de[- ]facto|most[- ]cited|state[- ]of[- ]the[- ]art"
     r"|flagship|load[- ]bearing|industry[- ]standard|gold[- ]standard|seminal"
-    r"|best[- ]in[- ]class|world[- ]leading|groundbreaking|cutting[- ]edge|revolutionary)\b",
+    r"|best[- ]in[- ]class|world[- ]leading|groundbreaking|cutting[- ]edge|revolutionary"
+    r"|the (?:most|clearest|leading|strongest|best|only)"  # unsupported superlatives
+    r"|every\b[^.;]*\bshould)\b",  # prescriptive "every team should read"
     re.IGNORECASE,
 )
 # Rules reported as warnings. A rule graduates to an error by leaving this set.
-WARN_RULES = {"year", "length", "hype", "sentences"}
+WARN_RULES = {"year"}
 
 
 def url_key(url: str) -> str:
