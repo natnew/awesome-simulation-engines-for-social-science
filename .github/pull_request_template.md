@@ -26,7 +26,7 @@ Type labels: `paper` `book` `article` `tool` `framework` `course` `dataset` `cha
 ## Checklist
 
 - [ ] Entries are placed under an existing `### Section` (or the section change was agreed in an issue).
-- [ ] Each one-liner states the **contribution to a simulation engine**, not just the topic.
+- [ ] Each one-liner states the **contribution to a simulation engine** in one neutral sentence (≤250 characters, no rankings or superlatives).
 - [ ] Links are stable (DOI, publisher, or official project page preferred).
 - [ ] No duplicate of an existing entry (checked cross-referenced sections).
 - [ ] `python3 scripts/check_readme.py` reports no errors (CI runs it too).

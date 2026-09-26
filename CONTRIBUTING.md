@@ -13,7 +13,7 @@ Contributions of every size are welcome — a new resource, a better description
 
 3. Use one of these type labels: `paper` `book` `article` `tool` `framework` `course` `dataset` `chapter`
 
-4. Keep the one-liner focused on what the resource contributes to building or understanding a social simulation engine — not just what the resource is about.
+4. Keep the one-liner focused on what the resource contributes to building or understanding a social simulation engine — not just what the resource is about. One neutral sentence, at most 250 characters: describe what it does, not how famous, first, or best it is.
 
 ## Quality bar
 
