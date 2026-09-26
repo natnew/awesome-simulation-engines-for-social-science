@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Claude-specific operating layer for **Awesome Learned Social Simulation Engines**, a curated awesome list, not an application. `README.md` is the product. There is no build, package, or test suite; the only automated check is the `Links` workflow.
+Claude-specific operating layer for **Awesome Learned Social Simulation Engines**, a curated awesome list, not an application. `README.md` is the product. There is no build or package; the only code is the stdlib checker in `scripts/`, which the `Lint` workflow runs with its tests alongside the `Links` workflow.
 
 `AGENTS.md` is the full, tool-agnostic protocol (curation standard, link rules, triage dispositions, protected areas). Read it before any review or edit; this file adds only routing, repo gotchas, and Claude's output format. Do not copy its content here.
 
@@ -15,7 +15,7 @@ Claude-specific operating layer for **Awesome Learned Social Simulation Engines*
 | Section background | `docs/00-landscape-map.md`, `docs/01-core-concepts.md`, `docs/02-existing-systems.md` |
 | Maintainer precedent | Recent merged PRs and closed issues on GitHub |
 
-`README.md` is ~100 KB. Read the outline (`grep -n '^#' README.md`) and then only the sections you need.
+`README.md` is ~75 KB. Read the outline (`grep -n '^#' README.md`) and then only the sections you need.
 
 ## Invariants
 
@@ -45,7 +45,7 @@ For a batch of several independent PRs, issues, or a broken-link sweep, parallel
 
 ## Verification before commit
 
-- Run `python3 scripts/check_readme.py` (stdlib only). It must report 0 errors: entry format, type labels, duplicate works (arXiv/DOI-aware), https, cross-reference targets, Resource Map coverage, list sync, contribution length (≤250 chars), single sentence, and hype or superlative terms. The only warning left is a missing year in the title; don't add new ones. CI runs it with its tests (`python3 -m unittest discover -s scripts`).
+- Run `python3 scripts/check_readme.py` (stdlib only). It must report 0 errors: entry format, type labels, duplicate works (arXiv/DOI-aware), https, cross-reference targets, Resource Map coverage, list sync, contribution length (≤250 chars), single sentence, hype or superlative terms, and a year in every title. CI runs it with its tests (`python3 -m unittest discover -s scripts`).
 - Heading anchors and relative links must resolve. CI runs `lychee --offline --include-fragments "**/*.md"`, so run it locally if `lychee` is installed. Otherwise, check any new `#anchor` against its `###` heading by hand. Renaming a heading breaks Resource Map and cross-reference anchors.
 - Re-read the diff: the only changes should be what was asked, the format should match neighbouring entries exactly, and no protected area should be touched.
 - Run `git status` and confirm that no local-only or unrelated files are staged.
