@@ -30,10 +30,7 @@ Claude-specific operating layer for **Awesome Learned Social Simulation Engines*
 
 ## Repo gotchas
 
-- `.gitignore` lists `docs/`, but the three `docs/*.md` files are tracked. Edits to them commit normally. A new file there needs `git add -f`, and only when asked.
-- `CHANGELOG.md`, `specs/`, and `.claude/` are gitignored, so never reference them from public files.
-- `skills/changelog` and `skills/feature-spec` are generic templates, not part of this repo's workflow. `feature-spec` expects a `specs/roadmap.md` that doesn't exist. Don't invoke either unless asked.
-- `.codex/` and `.trae/` hold empty placeholders for other tools. Ignore them.
+- `CHANGELOG.md`, `specs/`, and `.claude/` are gitignored local working files, so never reference them from public files.
 - `.github/workflows/claude.yml` runs Claude on `@claude` mentions in issues and PRs. In that context, answer in the thread using the output format below.
 
 ## Workflow
