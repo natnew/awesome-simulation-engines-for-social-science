@@ -43,6 +43,7 @@ Use the canonical format from `CONTRIBUTING.md`:
 
 * Use canonical names, HTTPS, and both em dashes. One list item and one contribution sentence per entry.
 * Types: `paper`, `book`, `article`, `tool`, `framework`, `course`, `dataset`, `chapter`. Keep the README legend aligned with types in use.
+* `scripts/check_readme.py` enforces this section mechanically (format, labels, duplicate works, https, cross-reference targets, Resource Map coverage, and that label and section lists in `CONTRIBUTING.md`, this file, `CLAUDE.md`, the PR template, and the `add-resource` form match the README). CI blocks on its errors; its warnings mark wording rules still being phased in. Judgement checks — contribution, source quality, placement — remain yours.
 * Entries belong under an existing `### Section` within `## Resources`. Domain sections are the primary taxonomy; the Resource Map groups them for navigation. The Functional lens (reconstruct / simulate / plan / calibrate / validate / risk) is secondary and piloted only on Existing Systems.
 * Choose the narrowest accurate section by **engine function**, not surface topic: calibration belongs under Uncertainty Quantification / Evaluation rather than its demonstration domain. If two sections fit, choose where readers would look first and respect cross-reference notes. Explain uncertain placement and recommend one option.
 * Preserve headings, anchors, explanatory text, tables, and protected structures. No broad formatting sweeps or bulk moves unless explicitly requested.
@@ -87,7 +88,7 @@ If a file's suitability for the public repository is uncertain, leave it untouch
 
 ## Git and Reporting
 
-* Before committing, run `git status` and inspect staged files; exclude unauthorised protected, local-only, and unrelated changes.
+* Before committing, run `python3 scripts/check_readme.py` and `git status`, and inspect staged files; exclude unauthorised protected, local-only, and unrelated changes.
 * Use a focused branch and review for non-trivial changes; do not push them directly to `main` or bundle unrelated changes.
 * Report what was reviewed, the decision, changes, relevant checks, remaining risks or uncertainties, and any follow-up. Include a suggested maintainer comment when relevant.
 * Comments should be warm, concise, respectful, and decision-oriented: thank the contributor, lead with what works, and explain any correction and its value. Avoid long or defensive explanations and unnecessary contributor work.

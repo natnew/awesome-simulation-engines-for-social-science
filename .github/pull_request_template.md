@@ -29,6 +29,7 @@ Type labels: `paper` `book` `article` `tool` `framework` `course` `dataset` `cha
 - [ ] Each one-liner states the **contribution to a simulation engine**, not just the topic.
 - [ ] Links are stable (DOI, publisher, or official project page preferred).
 - [ ] No duplicate of an existing entry (checked cross-referenced sections).
+- [ ] `python3 scripts/check_readme.py` reports no errors (CI runs it too).
 - [ ] PR title is short and descriptive (e.g. `Add three ABM framework resources`).
 
 ## Notes for the reviewer
