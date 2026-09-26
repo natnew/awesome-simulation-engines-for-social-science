@@ -4,7 +4,7 @@ Shared operating protocol for **Awesome Learned Social Simulation Engines**. Cla
 
 ## Purpose and Authority
 
-`README.md` is the product: a selective, durable map of learned social simulation. Each entry must explain its **contribution to a simulation engine**, not just its subject. Prioritise quality, neutral descriptions, and navigation over volume. There is no application build, test suite, or runtime to operate.
+`README.md` is the product: a selective, durable map of learned social simulation. Each entry must explain its **contribution to a simulation engine**, not just its subject. Prioritise quality, neutral descriptions, and navigation over volume. There is no application build or runtime; the only code is the stdlib checker in `scripts/` and its tests.
 
 Assist with entry and PR review, issue triage, link and duplicate checks, placement, wording, and maintainer comment drafts. **Modify files only when explicitly asked**, and keep edits focused. Within an authorised editing task, make small safe corrections directly; reserve contributor revision requests for substantive gaps.
 
@@ -29,7 +29,7 @@ Reject generic AI/ML material without that contribution, speculative or low-sign
 Every addition or approval must pass these checks:
 
 * **Contribution:** specific, factual, clear to a newcomer, and expressed in one neutral sentence. Remove hype, rankings, pricing, time-sensitive claims, unsupported performance/adoption/novelty claims, and personal or biographical framing.
-* **Source:** canonical, durable, reachable, and compliant with the link rules below.
+* **Source:** canonical, durable, reachable, and compliant with the link rules below. For a `tool`, check it has had a release or commit in the last 18 months; when reviewing or editing an existing tool entry that fails this, recommend a maintained successor or removal.
 * **Distinct value:** search the whole README, including nearby and cross-referenced sections, for matching URLs, alternate URLs for the same work, titles, author/product names, renamed or mirrored repositories, and stronger existing equivalents. Prefer improving a near-duplicate or using a cross-reference over duplicating an entry.
 * **Placement and format:** follow the rules below; do not turn one contribution into a structural change.
 
@@ -43,7 +43,7 @@ Use the canonical format from `CONTRIBUTING.md`:
 
 * Use canonical names, HTTPS, and both em dashes. One list item and one contribution sentence per entry.
 * Types: `paper`, `book`, `article`, `tool`, `framework`, `course`, `dataset`, `chapter`. Keep the README legend aligned with types in use.
-* `scripts/check_readme.py` enforces this section mechanically (format, labels, duplicate works, https, cross-reference targets, Resource Map coverage, and that label and section lists in `CONTRIBUTING.md`, this file, `CLAUDE.md`, the PR template, and the `add-resource` form match the README). It also rejects contributions over 250 characters, with more than one sentence, or with ranking, superlative, or hype terms. CI blocks on its errors; a missing year is still a warning. Judgement checks — contribution, source quality, placement — remain yours.
+* `scripts/check_readme.py` enforces this section mechanically (format, labels, duplicate works, https, cross-reference targets, Resource Map coverage, and that label and section lists in `CONTRIBUTING.md`, this file, `CLAUDE.md`, the PR template, and the `add-resource` form match the README). It also rejects contributions over 250 characters, with more than one sentence, or with ranking, superlative, or hype terms. It also requires a year in every title. CI blocks on any error. Judgement checks — contribution, source quality, placement — remain yours.
 * Entries belong under an existing `### Section` within `## Resources`. Sections are the primary taxonomy; the Resource Map groups them into tiers, lists them in body order, and tags each with its Functional lens role (reconstruct / simulate / plan / calibrate / validate / risk). Existing Systems also tags each system individually.
 * Choose the narrowest accurate section by **engine function**, not surface topic. If two sections fit, choose where readers would look first and respect cross-reference notes. Explain uncertain placement and recommend one option. Boundaries that come up most often:
   * A calibration or inference method → Uncertainty Quantification. A check that a calibration, simulator, or agent population can be trusted → Evaluation and Validation. An environment or dataset for scoring agents → Benchmarks and Testbeds.

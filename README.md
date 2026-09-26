@@ -149,8 +149,8 @@ The sections are the primary taxonomy. This functional lens is a secondary, cros
 
 Social systems lack the invariant laws of physical world models, so three further cross-cutting categories are first-class rather than optional:
 
-- **Calibrate** — fit a simulator to data: simulation-based inference, history matching.
-- **Validate** — establish trust: uncertainty quantification, behavioural-fidelity benchmarks, model documentation.
+- **Calibrate** — fit a simulator to data and quantify its uncertainty: simulation-based inference, emulation, history matching, sensitivity analysis.
+- **Validate** — establish trust: calibration diagnostics, behavioural-fidelity tests and benchmarks, model documentation.
 - **Risk** — surface second-order and distributional harms, and leakage from synthetic populations.
 
 The lens is applied per section in the Resource Map's **Function** column and per system in [Existing Systems](#existing-systems).

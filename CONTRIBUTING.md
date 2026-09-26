@@ -22,6 +22,7 @@ Before adding a resource, check:
 - Is it the best available resource for this concept, or just a convenient one?
 - Does the one-liner explain the contribution clearly to someone new to the area?
 - Is the link stable (prefer DOIs, publisher pages, or official project pages over blog posts)?
+- For software, is it maintained (a release or commit in the last 18 months)?
 
 ## Check your entry
 
@@ -31,7 +32,7 @@ From the repository root, run:
 python3 scripts/check_readme.py
 ```
 
-It needs only Python 3 and reports formatting, type-label, duplicate, and link-style problems with line numbers. The same check runs automatically on every pull request, together with an offline check of anchors and relative links.
+It needs only Python 3 and reports formatting, type-label, duplicate, link-style, and wording problems (length, multiple sentences, hype terms) with line numbers. The same check runs automatically on every pull request, together with an offline check of anchors and relative links.
 
 ## Sections
 
