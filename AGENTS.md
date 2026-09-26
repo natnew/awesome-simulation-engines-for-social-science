@@ -52,7 +52,7 @@ Use the canonical format from `CONTRIBUTING.md`:
 
 * Prefer **DOI > publisher / official project page > stable mirror**. For tools, use the official repository or project page over registries or marketing pages; repository links must target the main project, not arbitrary forks.
 * Avoid link shorteners, unnecessary tracking parameters, and login-gated sources unless the section accepts them.
-* Internal links and anchors must resolve. `.github/workflows/links.yml` checks these offline on PRs; external links are swept weekly and on demand.
+* Internal links and anchors must resolve. `.github/workflows/links.yml` checks these offline on PRs; external links are swept weekly and on demand, and broken ones are reported in a single open `Link report` issue labelled `broken-link`. Triage that issue with the broken-link rules below.
 * `403`/`429` responses are treated as reachable publisher bot-blocks, not evidence of breakage by themselves.
 * For broken links, confirm the failure, seek a canonical replacement, and preserve the entry when a durable replacement exists. Recommend removal only if none exists; record replacement sources in the issue or PR.
 
