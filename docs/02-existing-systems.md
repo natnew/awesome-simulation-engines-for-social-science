@@ -1,47 +1,26 @@
 # Existing Systems
 
-The landscape of social simulation is populated by several state-of-the-art systems and frameworks that demonstrate the potential of AI-native modelling. These systems range from general-purpose generative agent libraries to domain-specific economic and urban simulators.
+Working social simulation systems fall into a few recurring archetypes. This note describes them and says where each lives in the list, so it never duplicates the README's entries. The resources themselves, with links and one-line contributions, are in the [README](../README.md#resource-map).
 
-## Generative Agent Frameworks
+## System archetypes
 
-These systems use Large Language Models (LLMs) to drive agent behaviour and interaction.
+| Archetype | What it does | Where to look |
+|---|---|---|
+| Generative-agent societies | LLM-driven agents with memory, planning, and dialogue interacting in a shared environment | [Existing Systems](../README.md#existing-systems), [LLM-Based Social Simulation](../README.md#llm-based-social-simulation) |
+| Agent-based modelling platforms | Rule-based agents on grids and networks, built for experiments and replication | [Agent-Based Modelling](../README.md#agent-based-modelling) |
+| Economic and policy simulators | Environments where interventions or mechanisms are searched and compared | [Policy and Intervention Modelling](../README.md#policy-and-intervention-modelling), [Multi-Agent Reinforcement Learning](../README.md#multi-agent-reinforcement-learning) |
+| Learned simulators | Dynamics learned from data rather than hand-coded, from latent world models to neural surrogates | [Machine-Learned World Models](../README.md#machine-learned-world-models), [Implementation Patterns](../README.md#implementation-patterns) |
+| Population substrates | Synthetic populations and digital twins that the other archetypes run on | [Synthetic Populations](../README.md#synthetic-populations), [Datasets and Empirical Grounding](../README.md#datasets-and-empirical-grounding) |
 
-- **Concordia (Google DeepMind):** [GitHub](https://github.com/google-deepmind/concordia) | [Paper](https://arxiv.org/abs/2312.03664) — An open-source library for building LLM-driven multi-agent simulations grounded in physical, social, or digital environments.
-- **Project Sid (Altera.AL):** [Paper](https://arxiv.org/abs/2411.00114) | [Website](https://altera.al/) — A large-scale simulation demonstrating emergent civilisational dynamics, including professions, governance, and cultural norms among hundreds of agents.
-- **OASIS (Yang et al.):** [Paper](https://arxiv.org/abs/2411.11581) — A social media simulator capable of scaling to one million LLM-driven agents to study group behaviour and information propagation.
+## Questions to ask of any system
 
-## Economic and Policy Simulators
+The [Functional lens](../README.md#functional-lens) gives six questions for judging a system, whatever its archetype:
 
-Systems designed specifically for testing economic theories and policy interventions.
+1. **Reconstruct:** what observable social state does it produce, and from which data?
+2. **Simulate:** which transitions and interactions does it model, and at what scale?
+3. **Plan:** can it be used to choose interventions, and against which objectives?
+4. **Calibrate:** how are its parameters fitted to data, and with what inference method?
+5. **Validate:** what evidence shows its behaviour matches the system it represents?
+6. **Risk:** which distributional harms, leakage, or misuse pathways has it been checked for?
 
-- **The AI Economist (Salesforce Research):** [Website](https://einstein.ai/the-ai-economist) | [Paper](https://www.science.org/doi/10.1126/sciadv.abk2607) — A two-level reinforcement learning framework where economic agents and a social planner co-adapt to design optimal taxation policies.
-- **Stanford Economic Simulations:** [Project Page](https://digitaleconomy.stanford.edu/project/economic-simulations-with-ai/) — A research programme at the Stanford Digital Economy Lab that combines LLMs and causal reasoning to build auditable economic models.
-- **PandemicSimulator (Sony AI):** [GitHub](https://github.com/SonyResearch/PandemicSimulator) | [Paper](https://www.jair.org/index.php/jair/article/view/12632) — An agent-based Markov model used to evaluate and optimise COVID-19 mitigation policies through reinforcement learning.
-
-## Agent-Based Modelling (ABM) Platforms
-
-Canonical frameworks for building bottom-up simulations of individual agents.
-
-- **Mesa:** [GitHub](https://github.com/projectmesa/mesa) | [Website](https://mesa.readthedocs.io/) — The default Python-based ABM framework, widely used for its integration with the scientific Python stack.
-- **NetLogo:** [Website](https://ccl.northwestern.edu/netlogo/) — The de-facto reference for emergence pedagogy and rapid prototyping of agent-based models.
-- **AgentTorch:** [Paper](https://arxiv.org/abs/2409.10568) — A differentiable ABM framework from the MIT Media Lab that scales LLM-guided simulations to millions of agents.
-
-## World Models and Learned Simulators
-
-Systems that learn system dynamics directly from data rather than following hand-coded rules.
-
-- **DreamerV3 (Google DeepMind):** [Paper](https://arxiv.org/abs/2301.04104) | [GitHub](https://github.com/danijar/dreamerv3) — A general-purpose world-model agent that learns to master diverse tasks by training inside its own learned latent-dynamics simulator.
-- **GameNGen (Google Research):** [Paper](https://arxiv.org/abs/2408.14837) — A neural game engine that simulates interactive environments (like DOOM) using only diffusion models, without a traditional engine.
-- **TrafficSim (Uber ATG):** [Paper](https://arxiv.org/abs/2101.06557) — A neural multi-agent traffic simulator that learns socially plausible driving behaviour from real-world logs.
-
-## Synthetic Population Tools
-
-Frameworks for constructing realistic populations that serve as the substrate for simulations.
-
-- **Out of One, Many (Argyle et al.):** [Paper](https://doi.org/10.1017/pan.2023.2) — Foundational work demonstrating that LLMs can reproduce human survey response distributions when conditioned on demographic profiles.
-- **CitySEIRCast:** [Paper](https://link.springer.com/article/10.1007/s40747-024-01683-x) — A city-scale digital twin that couples synthetic populations with mobility and social data for pandemic analysis.
-- **Twin-2K-500:** [Dataset](https://pubsonline.informs.org/doi/10.1287/mksc.2025.0262) — A dataset for building digital twins of over 2,000 people based on extensive psychological and behavioural measures.
-
-## How this applies to this repository
-
-These existing systems provide the **benchmarks and reference implementations** for the modular components we curate. By studying these platforms, we can identify the gaps in current simulation technology—such as the need for better uncertainty quantification or more transparent causal reasoning—and target our curation toward resources that address these needs.
+Most published systems answer the first two well and the last three thinly. The [Uncertainty Quantification](../README.md#uncertainty-quantification), [Evaluation and Validation](../README.md#evaluation-and-validation), and [Ethical Risk Discovery](../README.md#ethical-risk-discovery) sections collect the methods for closing that gap.

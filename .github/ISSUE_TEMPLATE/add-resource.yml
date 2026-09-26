@@ -48,27 +48,25 @@ body:
       options:
         - Computational Social Science
         - Complex Systems
-        - Social Simulation
         - Microsimulation
-        - Causal Inference
-        - Uncertainty Quantification
-        - Responsible AI
-        - Existing Systems
         - Agent-Based Modelling
         - Synthetic Populations
         - Multi-Agent Reinforcement Learning
         - LLM-Based Social Simulation
         - Machine-Learned World Models
+        - Existing Systems
+        - Bounded Slices and Composability
+        - Implementation Patterns
+        - Causal Inference
         - Policy and Intervention Modelling
+        - Uncertainty Quantification
+        - Evaluation and Validation
+        - Benchmarks and Testbeds
+        - Standards and Reproducibility
         - Ethical Risk Discovery
         - Datasets and Empirical Grounding
         - Tools and Libraries
-        - Benchmarks and Testbeds
-        - Bounded Slices and Composability
         - Frontier Science Parallels
-        - Implementation Patterns
-        - Evaluation and Validation
-        - Standards and Reproducibility
         - Unsure
     validations:
       required: true
