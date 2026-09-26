@@ -172,6 +172,9 @@ The lens is applied per section in the Resource Map's **Function** column and pe
 ### Microsimulation
 
 - [Katikireddi et al. — Microsimulation as a flexible tool to evaluate policies and their impact on socioeconomic inequalities in health (2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10590730/) `paper` — Demonstrates how a microsimulation engine surfaces unequal health effects of policy interventions across income and demographic groups; a worked example of distributional analysis.
+- [Sutherland & Figari — EUROMOD: The European Union tax-benefit microsimulation model (International Journal of Microsimulation 2013)](https://doi.org/10.34196/ijm.00075) `paper` — Describes a multi-country tax-benefit microsimulation model, covering its policy scope, input data, validation process, and rule-programming language.
+- [Li & O'Donoghue — A survey of dynamic microsimulation models: Uses, model structure and methodology (International Journal of Microsimulation 2013)](https://doi.org/10.34196/ijm.00082) `paper` — Surveys the methodological choices behind more than 60 dynamic microsimulation models, a reference for designing how simulated individuals age and transition over time.
+- [OpenFisca — Rules-as-code microsimulation engine (2011–)](https://openfisca.org/en/) `tool` — Open-source engine that encodes tax and benefit legislation as code and computes its effects on real or survey population data, for testing reforms on a population.
 
 ### Agent-Based Modelling
 
@@ -187,6 +190,7 @@ The lens is applied per section in the Resource Map's **Function** column and pe
 - [Epstein & Axtell — Growing Artificial Societies: Social Science from the Bottom Up (1996)](https://mitpress.mit.edu/9780262550253/growing-artificial-societies/) `book` — The Sugarscape monograph, in which trade, wealth distributions, group conflict, and cultural transmission emerge from minimal local rules.
 - [Chopra et al. — On the Limits of Agency in Agent-Based Models (AAMAS 2025)](https://arxiv.org/abs/2409.10568) `paper` — Introduces LLM-driven behaviour archetypes inside a differentiable ABM (AgentTorch), scaling LLM-guided agent simulation to millions of agents.
 - [Zheng et al. — The AI Economist: Taxation policy design via two-level deep multiagent reinforcement learning (2022)](https://www.science.org/doi/10.1126/sciadv.abk2607) `paper` — Two-level reinforcement learning framework in which economic agents and a social planner co-adapt; a worked example of MARL-based tax policy design.
+- [Taillandier et al. — Building, composing and experimenting complex spatial models with the GAMA platform (GeoInformatica 2019)](https://doi.org/10.1007/s10707-018-00339-6) `tool` — Agent-based modelling platform for spatially explicit socio-environmental models, with support for composing models and running experiments on them.
 
 > Cross-references: [Grimm et al. 2020 ODD Protocol](https://www.jasss.org/23/2/7.html) is listed under [`### Standards and Reproducibility`](#standards-and-reproducibility). They are deliberately not duplicated here.
 
@@ -293,12 +297,14 @@ _Functional lens — primary role of each system (see [Functional lens](#functio
 - [Golder & Macy — Digital Footprints: Opportunities and Challenges for Online Social Research (2014)](https://www.annualreviews.org/eprint/KiHmqacYVWqAJvNvpPW4/full/10.1146/annurev-soc-071913-043145) `paper` — Explores how fine-grained, time-stamped digital traces can support empirical validation of social dynamics in the digital age.
 - [Cao — Research on co-simulation of multi-resolution models based on HLA (2023)](https://doi.org/10.1177/00375497221107940) `paper` — Patterns for orchestrating multiple simulation models through HLA-based federated coupling and shared simulation state.
 - [Gao et al. — Large language models empowered agent-based modeling and simulation: a survey and perspectives (2024)](https://www.nature.com/articles/s41599-024-03611-3) `paper` — Surveys the "simulation-as-a-tool" pattern for LLM-driven agent-based simulation workflows.
+- [Horni, Nagel & Axhausen (eds.) — The Multi-Agent Transport Simulation MATSim (2016)](https://doi.org/10.5334/baw) `book` — Open-access book on an open-source framework that simulates traffic by following individual synthetic travellers through their daily activity plans, a reusable transport slice.
 
 ### Implementation Patterns
 
 - [Chopra et al. — flame: A Framework for Learning in Agent-based ModEls (AAMAS 2024)](https://www.media.mit.edu/publications/flame-a-framework-for-learning-in-agent-based-models-1/) `tool` — The AgentTorch implementation of differentiable ABMs in PyTorch; enables automatic differentiation through agent interactions for rapid calibration.
 - [Andelfinger — Towards Differentiable Agent-Based Simulation (2022)](https://doi.org/10.1145/3565810) `paper` — Demonstrates how automatic differentiation can support gradient-based optimization and calibration in complex social ABMs.
 - [Dyer et al. — Interventionally Consistent Surrogates for Complex Simulation Models (2024)](https://arxiv.org/abs/2312.11158) `paper` — Learns neural surrogates of complex simulators that remain consistent under interventions of interest, using causal abstraction.
+- [Quera-Bofarull, Dyer, Calinescu, Farmer & Wooldridge — BlackBIRDS: Black-Box Inference foR Differentiable Simulators (JOSS 2023)](https://doi.org/10.21105/joss.05776) `tool` — Python package that provides a PyTorch structure for differentiable simulators and gradient-assisted procedures for estimating their parameters.
 
 ### Causal Inference
 
@@ -326,6 +332,7 @@ _Functional lens — primary role of each system (see [Functional lens](#functio
 - [Strnad, Barfuss, Donges & Heitzig — Deep Reinforcement Learning in World-Earth System Models to Discover Sustainable Management Strategies (Chaos 2019)](https://doi.org/10.1063/1.5124673) `paper` — Deep-RL agents acting inside World–Earth system models discover sustainable management pathways, such as mixes of carbon taxes and renewable subsidies.
 - [Zhang, Williams, Phade, Srinivasa, Y. Zhang, Gupta, Bengio & Zheng — AI for Global Climate Cooperation: Modeling Global Climate Negotiations, Agreements, and Long-Term Cooperation in RICE-N (ICML 2025)](https://proceedings.mlr.press/v267/zhang25ce.html) `paper` — Multi-region integrated assessment model with explicit negotiation protocols, used as a MARL environment for designing global climate-cooperation mechanisms.
 - [Dütting, Feng, Narasimhan, Parkes & Ravindranath — Optimal Auctions through Deep Learning: Advances in Differentiable Economics (JACM 2024)](https://doi.org/10.1145/3630749) `paper` — Frames optimal auction design as a constrained deep-learning problem (differentiable economics), for interventions that can be cast as mechanisms.
+- [Kerr et al. — Covasim: An agent-based model of COVID-19 dynamics and interventions (PLOS Computational Biology 2021)](https://doi.org/10.1371/journal.pcbi.1009149) `tool` — Open-source epidemic ABM supporting distancing, vaccination, testing, isolation, contact tracing, and quarantine interventions, for comparing policy scenarios.
 
 ### Uncertainty Quantification
 
@@ -345,12 +352,20 @@ _Functional lens — primary role of each system (see [Functional lens](#functio
 - [Talts, Betancourt, Simpson, Vehtari & Gelman — Validating Bayesian Inference Algorithms with Simulation-Based Calibration (2018)](https://arxiv.org/abs/1804.06788) `paper` — Simulation-based calibration: draw from the prior, simulate, and check rank uniformity to test whether a Bayesian inference pipeline is itself well calibrated.
 - [Hermans, Delaunoy, Rozet, Wehenkel, Begy & Louppe — A Trust Crisis in Simulation-Based Inference? Your Posterior Approximations Can Be Unfaithful (TMLR 2022)](https://arxiv.org/abs/2110.06581) `paper` — Shows empirically that neural SBI posteriors can be silently overconfident, a check to run before trusting a calibrated social simulator.
 - [Mei, Xie, Yuan & Jackson — A Turing test of whether AI chatbots are behaviorally similar to humans (PNAS 2024)](https://www.pnas.org/doi/10.1073/pnas.2313925121) `paper` — Compares LLMs with humans across classic economic games and Big Five personality measures, a behavioural-fidelity test for LLM agents.
+- [Windrum, Fagiolo & Moneta — Empirical Validation of Agent-Based Models: Alternatives and Prospects (JASSS 2007)](https://www.jasss.org/10/2/8.html) `paper` — Reviews approaches to empirically validating agent-based models and the methodological problems each faces, for choosing a validation strategy.
+- [Bisbee, Clinton, Dorff, Kenkel & Larson — Synthetic Replacements for Human Survey Data? The Perils of Large Language Models (Political Analysis 2024)](https://doi.org/10.1017/pan.2024.5) `paper` — Finds that LLM personas match average ANES thermometer scores but show too little variance and yield regression estimates that differ from real survey data.
+- [Larooij & Törnberg — Do Large Language Models Solve the Problems of Agent-Based Modeling? A Critical Review of Generative Social Simulations (2025)](https://arxiv.org/abs/2504.03274) `paper` — Critical review finding that generative agent-based simulations mostly validate by subjective believability and do not yet demonstrate operational validity.
+- [Wang, Morgenstern & Dickerson — Large language models that replace human participants can harmfully misportray and flatten identity groups (Nature Machine Intelligence 2025)](https://doi.org/10.1038/s42256-025-00986-z) `paper` — Shows that LLMs standing in for human participants misportray and flatten demographic groups, a validity and harm check for LLM-as-population simulation.
+- [Anthis et al. — Position: LLM Social Simulations Are a Promising Research Method (ICML 2025)](https://proceedings.mlr.press/v267/anthis25a.html) `paper` — Argues that LLM simulations of research subjects can become accurate and verifiable by addressing five tractable challenges, with directions such as context-rich prompting and fine-tuning.
+- [Ashokkumar, Hewitt, Ghezae & Willer — Large language models can predict the results of social science experiments (Nature 2026)](https://doi.org/10.1038/s41586-026-10742-x) `paper` — Finds that GPT-4 predictions of treatment effects across an archive of social science experiments correlate strongly with the actual effects, at accuracy similar to pooled human forecasts.
 
 ### Benchmarks and Testbeds
 
 - [Agapiou et al. — Melting Pot 2.0 (DeepMind 2023)](https://arxiv.org/abs/2211.13746) `tool` — Evaluation suite of 50+ social scenarios testing whether MARL agents generalise cooperation, trust, and reciprocity to novel situations and partners.
 - [Google DeepMind — Kaggle Game Arena (2025)](https://www.kaggle.com/game-arena) `tool` — Persistent benchmarking platform using games such as Werewolf and poker to evaluate how AI agents reason under uncertainty, detect deception, and manage hidden information.
 - [Chuang et al. — DEBATE: A Large-Scale Benchmark for Role-Playing LLM Agents in Multi-Agent, Long-Form Debates (NeurIPS 2025)](https://openreview.net/pdf?id=7mWVbd4IXD) `dataset` — Benchmark comparing LLM-simulated opinion trajectories in multi-agent debates against data from 2,792 human participants, testing the authenticity of simulated group dynamics.
+- [Piatti et al. — Cooperate or Collapse: Emergence of Sustainable Cooperation in a Society of LLM Agents (NeurIPS 2024)](https://arxiv.org/abs/2404.16698) `tool` — GovSim: common-pool resource scenarios (fishery, pasture, pollution) in which LLM agents must sustain a shared resource, testing cooperation, negotiation, and the role of communication.
+- [Zhou et al. — SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents (ICLR 2024)](https://arxiv.org/abs/2310.11667) `tool` — Open-ended environment that samples social scenarios, goals, and characters for role-playing agents and scores them on seven social dimensions.
 
 > Cross-references: [Pan et al. 2023 MACHIAVELLI](https://proceedings.mlr.press/v202/pan23a.html) and [Anthropic 2025 Agentic Misalignment](https://www.anthropic.com/research/agentic-misalignment) are listed under [`### Ethical Risk Discovery`](#ethical-risk-discovery). They are deliberately not duplicated here.
 
@@ -358,6 +373,8 @@ _Functional lens — primary role of each system (see [Functional lens](#functio
 
 - [VISA authors — VISA: A Structured Description Protocol for Agent-Based Simulation Models Towards Machine Reproducibility (2026)](https://arxiv.org/abs/2607.28027) `framework` — Defines a structured protocol for machine-readable agent-based model descriptions that supports automated model reconstruction and reproducible simulation.
 - [Grimm et al. — The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update (2020)](https://www.jasss.org/23/2/7.html) `framework` — Documentation protocol for describing agent-based models so they can be understood and replicated.
+- [Grimm et al. — Towards better modelling and decision support: Documenting model development, testing, and analysis using TRACE (Ecological Modelling 2014)](https://doi.org/10.1016/j.ecolmodel.2014.01.018) `framework` — Framework for documenting a model's rationale, design, testing, and analysis, complementing ODD with evidence that a model is fit for decision support.
+- [Janssen, Alessa, Barton, Bergin & Lee — Towards a Community Framework for Agent-Based Modelling (JASSS 2008)](https://www.jasss.org/11/2/6.html) `paper` — Sets out the Open Agent-Based Modelling Consortium, a community effort toward shared standards for describing, implementing, testing, and sharing agent-based models.
 
 ### Ethical Risk Discovery
 
