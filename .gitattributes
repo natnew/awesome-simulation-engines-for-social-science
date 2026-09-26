@@ -1,0 +1,2 @@
+# Repository tooling is not the product; keep GitHub from labelling this list a Python repo.
+scripts/*.py linguist-detectable=false

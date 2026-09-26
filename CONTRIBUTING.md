@@ -23,6 +23,16 @@ Before adding a resource, check:
 - Does the one-liner explain the contribution clearly to someone new to the area?
 - Is the link stable (prefer DOIs, publisher pages, or official project pages over blog posts)?
 
+## Check your entry
+
+From the repository root, run:
+
+```
+python3 scripts/check_readme.py
+```
+
+It needs only Python 3 and reports formatting, type-label, duplicate, and link-style problems with line numbers. The same check runs automatically on every pull request, together with an offline check of anchors and relative links.
+
 ## Sections
 
 Each resource must fall under one of the existing `### Section` headings in `README.md`. If you think a new section is needed, open an issue first to discuss it.

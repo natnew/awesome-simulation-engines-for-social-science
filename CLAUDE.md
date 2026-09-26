@@ -25,7 +25,7 @@ Claude-specific operating layer for **Awesome Learned Social Simulation Engines*
   ```
 - Place by **engine function**, not surface topic. Respect `> Cross-references: … deliberately not duplicated` notes; they are deliberate de-duplication, so never re-add a resource they point elsewhere.
 - Domain sections are the primary taxonomy. The Resource Map and Functional lens (only piloted in the Existing Systems table) are protected scaffolding.
-- Type labels: `paper` `book` `article` `tool` `framework` `course` `dataset` `chapter` (same list in `AGENTS.md`, `CONTRIBUTING.md`, and the PR template). The README "Entry types" legend lists only the labels in use, so add a label to it when its first entry lands.
+- Type labels: `paper` `book` `article` `tool` `framework` `course` `dataset` `chapter`. `CONTRIBUTING.md` is the source list; `scripts/check_readme.py` fails if this file, `AGENTS.md`, the PR template, or the `add-resource` form drift from it, or if the README "Entry types" legend differs from the labels in use.
 - Never invent resource facts or `CITATION.cff` metadata. Strip hype, rankings, and unsupported "state of the art" or "most-cited" claims from new or edited lines; don't sweep existing entries unless asked.
 
 ## Repo gotchas
@@ -37,7 +37,7 @@ Claude-specific operating layer for **Awesome Learned Social Simulation Engines*
 
 1. Read the request, then the issue, PR diff, or target section.
 2. Check scope and contribution against `AGENTS.md` → Curation Standard.
-3. Search for duplicates across the whole README by URL, alternate URL (arXiv vs DOI), title words, and author or product name: `grep -n -i '<fragment>' README.md`. Check cross-reference notes too.
+3. Search for duplicates across the whole README by title words and author or product name: `grep -n -i '<fragment>' README.md`. Check cross-reference notes too. The checker catches identical works by URL, arXiv ID, or DOI, but not a preprint linked by title elsewhere.
 4. Verify external links with WebFetch where available. `403`/`429` count as reachable; don't "fix" a link on that alone.
 5. Choose the smallest useful action. Make small safe fixes (wording, em dash, type label, anchor, tracking parameters, placement) yourself instead of asking the contributor.
 
@@ -45,6 +45,7 @@ For a batch of several independent PRs, issues, or a broken-link sweep, parallel
 
 ## Verification before commit
 
+- Run `python3 scripts/check_readme.py` (stdlib only). It must report 0 errors: entry format, type labels, duplicate works (arXiv/DOI-aware), https, cross-reference targets, Resource Map coverage, and list sync. Warnings flag hype terms, over-long or multi-sentence contributions, and missing years; don't add new ones. CI runs it with its tests (`python3 -m unittest discover -s scripts`).
 - Heading anchors and relative links must resolve. CI runs `lychee --offline --include-fragments "**/*.md"`, so run it locally if `lychee` is installed. Otherwise, check any new `#anchor` against its `###` heading by hand. Renaming a heading breaks Resource Map and cross-reference anchors.
 - Re-read the diff: the only changes should be what was asked, the format should match neighbouring entries exactly, and no protected area should be touched.
 - Run `git status` and confirm that no local-only or unrelated files are staged.

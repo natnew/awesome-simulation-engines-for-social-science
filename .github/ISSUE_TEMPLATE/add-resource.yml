@@ -37,6 +37,7 @@ body:
         - framework
         - course
         - dataset
+        - chapter
     validations:
       required: true
   - type: dropdown
@@ -67,6 +68,7 @@ body:
         - Frontier Science Parallels
         - Implementation Patterns
         - Evaluation and Validation
+        - Standards and Reproducibility
         - Unsure
     validations:
       required: true
